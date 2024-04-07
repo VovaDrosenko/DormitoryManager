@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('fonts/neuropolitical rg.otf') format('opentype');
+    font-weight: bold;
+    font-style: oblique;
+}
+
+
 html {
     font-size: 14px;
 }
@@ -12,6 +20,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
     height: 60px;
 }
 
@@ -33,7 +42,9 @@ html {
 }
 
 body {
+    font-family: 'TitleFont';
     margin-bottom: 60px;
+    padding-top: 70px;
 }
 
 .navbar-brand{
@@ -57,11 +68,16 @@ body {
         font-weight: bold; 
     }
 
-    #sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+.nav-item.btn {
+    padding-block: 0px;
+    margin-right: 10px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
         #sidebar ul li {
             padding: 0;
@@ -79,3 +95,8 @@ body {
                 #sidebar ul li a:hover {
                     background-color: #f0f0f0;
                 }
+
+
+.form-group{
+    
+}

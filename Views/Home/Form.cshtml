@@ -1,3 +1,62 @@
 ﻿@{
     ViewData["Title"] = "Форма поселення";
 }
+
+
+<div class="container">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Ім'я</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Володимир">
+                </div>
+
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Прізвище</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Дросенко">
+                </div>
+
+                <div class="mb-3">
+                    <label for="middleName" class="form-label">По-батькові</label>
+                    <input type="text" class="form-control" id="middleName" placeholder="Ігорович">
+                </div>
+
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Номер телефону</label>
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="0935154698" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="dob">Дата народження:</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Електрона пошта</label>
+                    <input type="email" class="form-control" id="email" placeholder="vovadrosenko@gmail.com" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="wishes">Побажання:</label>
+                    <textarea class="form-control" id="wishes" name="wishes" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="photo">Фото формату 3x4:</label>
+                    <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="applicationScan">Скан заяви на поселення:</label>
+                    <input type="file" class="form-control" id="applicationScan" name="applicationScan" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary" type="submit">Відправити</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
