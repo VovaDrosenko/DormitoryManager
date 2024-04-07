@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DormitoryManager.Models.Entities
 {
-    [Table("Dormitory")]
     public class Dormitory
     {
         [Key]
@@ -14,6 +13,6 @@ namespace DormitoryManager.Models.Entities
         public int DormitoryNumber { get; set; }
 
         // Navigation property for one-to-many relationship with Room
-        public required ICollection<Room> Rooms { get; set; }
+        public ICollection<Room> Rooms { get; set; }
     }
 }

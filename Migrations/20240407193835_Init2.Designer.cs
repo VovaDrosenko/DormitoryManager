@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DormitoryManager.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20240407170328_Initialize")]
-    partial class Initialize
+    [Migration("20240407193835_Init2")]
+    partial class Init2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,7 +38,7 @@ namespace DormitoryManager.Migrations
 
                     b.HasKey("DormitoryID");
 
-                    b.ToTable("Dormitory");
+                    b.ToTable("Dormitories");
 
                     b.HasData(
                         new
@@ -69,7 +69,7 @@ namespace DormitoryManager.Migrations
 
                     b.HasIndex("DormitoryID");
 
-                    b.ToTable("Room");
+                    b.ToTable("Rooms");
 
                     b.HasData(
                         new
@@ -89,16 +89,10 @@ namespace DormitoryManager.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"));
 
-                    b.Property<int>("DormitoryID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DormitoryNumber")
-                        .HasColumnType("int");
-
                     b.Property<int>("RoomID")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomNumber")
+                    b.Property<int?>("RoomID1")
                         .HasColumnType("int");
 
                     b.Property<string>("UserFirstName")
@@ -115,20 +109,17 @@ namespace DormitoryManager.Migrations
 
                     b.HasKey("UserID");
 
-                    b.HasIndex("DormitoryID");
-
                     b.HasIndex("RoomID");
 
-                    b.ToTable("User");
+                    b.HasIndex("RoomID1");
+
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
                             UserID = 1,
-                            DormitoryID = 1,
-                            DormitoryNumber = 0,
                             RoomID = 1,
-                            RoomNumber = 0,
                             UserFirstName = "Volodymyr",
                             UserLastName = "Drosenko",
                             UserMiddleName = "Igorovich"
@@ -338,7 +329,7 @@ namespace DormitoryManager.Migrations
                     b.HasOne("DormitoryManager.Models.Entities.Dormitory", "Dormitory")
                         .WithMany("Rooms")
                         .HasForeignKey("DormitoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Dormitory");
@@ -346,19 +337,15 @@ namespace DormitoryManager.Migrations
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.User", b =>
                 {
-                    b.HasOne("DormitoryManager.Models.Entities.Dormitory", "Dormitory")
-                        .WithMany()
-                        .HasForeignKey("DormitoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DormitoryManager.Models.Entities.Room", "Room")
                         .WithMany()
                         .HasForeignKey("RoomID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.Navigation("Dormitory");
+                    b.HasOne("DormitoryManager.Models.Entities.Room", null)
+                        .WithMany("Users")
+                        .HasForeignKey("RoomID1");
 
                     b.Navigation("Room");
                 });
@@ -417,6 +404,11 @@ namespace DormitoryManager.Migrations
             modelBuilder.Entity("DormitoryManager.Models.Entities.Dormitory", b =>
                 {
                     b.Navigation("Rooms");
+                });
+
+            modelBuilder.Entity("DormitoryManager.Models.Entities.Room", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

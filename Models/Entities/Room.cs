@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DormitoryManager.Models.Entities
 {
-    [Table("Room")]
     public class Room
     {
         [Key]
@@ -15,8 +13,9 @@ namespace DormitoryManager.Models.Entities
         public int NumberOfBeds { get; set; }
 
         // Foreign key for Dormitory
-        [ForeignKey("Dormitory")]
         public int DormitoryID { get; set; }
-        public required Dormitory Dormitory { get; set; }
+        //[ForeignKey("DormitoryID")]
+        public Dormitory Dormitory { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

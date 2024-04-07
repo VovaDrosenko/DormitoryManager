@@ -9,22 +9,40 @@ namespace DormitoryManager.Models
 {
     public class AppDBContext : IdentityDbContext
     {
+        public AppDBContext() : base() { }
 
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
-        public DbSet<Dormitory> Dormitorys { get; set; }
+        public DbSet<Dormitory> Dormitories { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<User> Users { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<User>();
-            builder.Entity<Room>();
-            builder.Entity<Dormitory>();
-            builder.SeedDormitories();
-            builder.SeedRooms();
-            builder.SeedUsers();
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.SeedDormitories();
+            modelBuilder.SeedRooms();
+            modelBuilder.SeedUsers();
 
+
+            modelBuilder.Entity<Dormitory>()
+                .HasKey(r => r.DormitoryID);
+            modelBuilder.Entity<Room>()
+                .HasKey(r => r.RoomID);
+            modelBuilder.Entity<User>()
+                .HasKey(r => r.UserID);
+
+            modelBuilder.Entity<Room>()
+                .HasOne(r => r.Dormitory)
+                .WithMany(r => r.Rooms)
+                .HasForeignKey(r => r.DormitoryID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Room)
+                .WithMany()
+                .HasForeignKey(u => u.RoomID)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
+

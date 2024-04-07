@@ -13,7 +13,6 @@ namespace DormitoryManager.Models.Initializer
                 UserFirstName = "Volodymyr",
                 UserLastName = "Drosenko",
                 UserMiddleName = "Igorovich",
-                DormitoryID = 1,
                 RoomID = 1 
             });
         }

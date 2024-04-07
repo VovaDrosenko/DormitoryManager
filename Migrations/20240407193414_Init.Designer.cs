@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DormitoryManager.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20240407164131_InitDB")]
-    partial class InitDB
+    [Migration("20240407193414_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,14 +38,7 @@ namespace DormitoryManager.Migrations
 
                     b.HasKey("DormitoryID");
 
-                    b.ToTable("Dormitory");
-
-                    b.HasData(
-                        new
-                        {
-                            DormitoryID = 1,
-                            DormitoryNumber = 7
-                        });
+                    b.ToTable("Dormitories");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Room", b =>
@@ -69,16 +62,7 @@ namespace DormitoryManager.Migrations
 
                     b.HasIndex("DormitoryID");
 
-                    b.ToTable("Room");
-
-                    b.HasData(
-                        new
-                        {
-                            RoomID = 1,
-                            DormitoryID = 1,
-                            NumberOfBeds = 1,
-                            RoomNumber = 548
-                        });
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.User", b =>
@@ -89,16 +73,7 @@ namespace DormitoryManager.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"));
 
-                    b.Property<int>("DormitoryID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DormitoryNumber")
-                        .HasColumnType("int");
-
                     b.Property<int>("RoomID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoomNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("UserFirstName")
@@ -115,24 +90,9 @@ namespace DormitoryManager.Migrations
 
                     b.HasKey("UserID");
 
-                    b.HasIndex("DormitoryID");
-
                     b.HasIndex("RoomID");
 
-                    b.ToTable("User");
-
-                    b.HasData(
-                        new
-                        {
-                            UserID = 1,
-                            DormitoryID = 1,
-                            DormitoryNumber = 0,
-                            RoomID = 1,
-                            RoomNumber = 0,
-                            UserFirstName = "Volodymyr",
-                            UserLastName = "Drosenko",
-                            UserMiddleName = "Igorovich"
-                        });
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -338,7 +298,7 @@ namespace DormitoryManager.Migrations
                     b.HasOne("DormitoryManager.Models.Entities.Dormitory", "Dormitory")
                         .WithMany("Rooms")
                         .HasForeignKey("DormitoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Dormitory");
@@ -346,19 +306,11 @@ namespace DormitoryManager.Migrations
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.User", b =>
                 {
-                    b.HasOne("DormitoryManager.Models.Entities.Dormitory", "Dormitory")
-                        .WithMany()
-                        .HasForeignKey("DormitoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DormitoryManager.Models.Entities.Room", "Room")
                         .WithMany()
                         .HasForeignKey("RoomID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("Dormitory");
 
                     b.Navigation("Room");
                 });
