@@ -1,21 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace DormitoryManager.Models.Entities
+namespace DormitoryManager.Models.Entities;
+
+public partial class Room
 {
-    public class Room
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RoomID { get; set; }
+    public string RoomId { get; set; } = null!;
 
-        public int RoomNumber { get; set; }
-        public int NumberOfBeds { get; set; }
+    public string DormId { get; set; } = null!;
 
-        // Foreign key for Dormitory
-        public int DormitoryID { get; set; }
-        //[ForeignKey("DormitoryID")]
-        public Dormitory Dormitory { get; set; }
-        public ICollection<User> Users { get; set; }
-    }
+    public int? NumberOfRoom { get; set; }
+
+    public string? NumberOfBeds { get; set; }
+
+    public string? ResidentsGender { get; set; }
+
+    public virtual Dormitory Dorm { get; set; } = null!;
+
+    public virtual ICollection<StudentRoom> StudentRooms { get; set; } = new List<StudentRoom>();
 }

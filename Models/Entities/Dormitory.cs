@@ -1,18 +1,21 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace DormitoryManager.Models.Entities
+namespace DormitoryManager.Models.Entities;
+
+public partial class Dormitory
 {
-    public class Dormitory
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DormitoryID { get; set; }
+    public string? DormId { get; set; } = null;
 
-        public int DormitoryNumber { get; set; }
+    public string? DormNumber { get; set; }
 
-        // Navigation property for one-to-many relationship with Room
-        public ICollection<Room> Rooms { get; set; }
-    }
+    public string? Address { get; set; }
+
+    public int? Floors { get; set; }
+
+    public virtual ICollection<Comendant> Comendants { get; set; } = new List<Comendant>();
+
+    public virtual ICollection<Room> Rooms { get; set; } = new List<Room>();
+
+    public virtual ICollection<Faculty> Faculties { get; set; } = new List<Faculty>();
 }

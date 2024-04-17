@@ -9,10 +9,7 @@ namespace DormitoryManager.Models.Initializer
         {
             modelBuilder.Entity<Room>().HasData(new Room
             {
-                RoomID = 1,
-                RoomNumber = 548,
-                NumberOfBeds = 1,
-                DormitoryID = 1
+               
             });
         }
     }
