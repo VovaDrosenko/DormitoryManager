@@ -1,3 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Список документів";
 }
+@model List<DormitoryManager.Models.Entities.Dormitory>
+
+<h1>Dormitories</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Dorm Id</th>
+            <th>Dorm Number</th>
+            <th>Address</th>
+            <th>Floors</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dormitory in Model)
+        {
+            <tr>
+                <td>@dormitory.DormId</td>
+                <td>@dormitory.DormNumber</td>
+                <td>@dormitory.Address</td>
+                <td>@dormitory.Floors</td>
+            </tr>
+        }
+    </tbody>
+</table>

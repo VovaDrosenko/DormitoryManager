@@ -1,4 +1,5 @@
 using DormitoryManager.Models;
+using DormitoryManager.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,9 +8,12 @@ namespace DormitoryManager.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DormitoryManagerContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DormitoryManagerContext context)
         {
+
+            _context = context; 
             _logger = logger;
         }
 
@@ -33,7 +37,8 @@ namespace DormitoryManager.Controllers
         }
         public IActionResult Documents()
         {
-            return View();
+            var dormitories = _context.Dormitories.ToList();
+            return View(dormitories);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
