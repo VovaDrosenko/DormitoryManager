@@ -1,15 +1,14 @@
-﻿<!--@model DormitoryManager.ViewModels.LoginViewModel</>
+﻿@using DormitoryManager.Models.DTO_s;
+@model LoginUserDto
 
-<h2>Login</h2>
-
-@using (Html.BeginForm("Login", "User", FormMethod.Post))-->
+@using (Html.BeginForm("Login", "Authorization", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Username)
-        @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
@@ -20,4 +19,3 @@
 
     <button type="submit" class="btn btn-primary">Login</button>
 }
-
