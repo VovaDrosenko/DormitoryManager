@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Volodymyr\source\repos\DormitoryManager
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Authorization/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Home/Creators.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
