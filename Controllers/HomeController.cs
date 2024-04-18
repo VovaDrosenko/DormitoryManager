@@ -1,5 +1,5 @@
 using DormitoryManager.Models;
-using DormitoryManager.Models.Entities;
+//using DormitoryManager.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,14 +8,14 @@ namespace DormitoryManager.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly DormitoryManagerContext _context;
+        //private readonly DormitoryManagerContext _context;
 
-        public HomeController(ILogger<HomeController> logger, DormitoryManagerContext context)
-        {
-
-            _context = context; 
-            _logger = logger;
-        }
+        //public HomeController(ILogger<HomeController> logger, DormitoryManagerContext context)
+        //{
+        //
+        //    _context = context; 
+        //    _logger = logger;
+        //}
 
         public IActionResult Index()
         {
@@ -35,11 +35,11 @@ namespace DormitoryManager.Controllers
         {
             return View();
         }
-        public IActionResult Documents()
-        {
-            var dormitories = _context.Dormitories.ToList();
-            return View(dormitories);
-        }
+        //public IActionResult Documents()
+        //{
+        //    var dormitories = _context.Dormitories.ToList();
+        //    return View(dormitories);
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

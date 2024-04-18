@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using DormitoryManager.Models.Entities;
-using DormitoryManager.Models.Initializer;
 using Microsoft.EntityFrameworkCore;
 
 namespace DormitoryManager.Models;
@@ -17,13 +16,15 @@ public partial class DormitoryManagerContext : DbContext
     {
     }
 
-    public virtual DbSet<Comendant> Comendants { get; set; }
-
-    public virtual DbSet<DeanWorker> DeanWorkers { get; set; }
-
     public virtual DbSet<Dormitory> Dormitories { get; set; }
 
+    public virtual DbSet<DormitoryComendant> DormitoryComendants { get; set; }
+
     public virtual DbSet<Faculty> Faculties { get; set; }
+
+    public virtual DbSet<FacultyWorker> FacultyWorkers { get; set; }
+
+    public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<Room> Rooms { get; set; }
 
@@ -31,105 +32,14 @@ public partial class DormitoryManagerContext : DbContext
 
     public virtual DbSet<StudentRoom> StudentRooms { get; set; }
 
+    public virtual DbSet<Worker> Workers { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-         => optionsBuilder.UseSqlServer("Server=tcp:dormitoryserver.database.windows.net,1433;Initial Catalog=DormitoryManager;Persist Security Info=False;User ID=Oleksandr;Password=Alexvoron17;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=tcp:dormitoryserver.database.windows.net,1433;Initial Catalog=DormitoryManager;Persist Security Info=False;User ID=Oleksandr;Password=Alexvoron17;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Comendant>(entity =>
-        {
-            entity.HasKey(e => e.ComendantId).HasName("XPKComendant");
-
-            entity.ToTable("Comendant");
-
-            entity.Property(e => e.ComendantId)
-                .HasMaxLength(18)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("comendant_id");
-            entity.Property(e => e.ComendantEmail)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("comendant_email");
-            entity.Property(e => e.ComendantLastname)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("comendant_lastname");
-            entity.Property(e => e.ComendantMiddlename)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("comendant_middlename");
-            entity.Property(e => e.ComendantName)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("comendant_name");
-            entity.Property(e => e.ComendantPassword)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("comendant_password");
-            entity.Property(e => e.ComendantPhone)
-                .HasMaxLength(13)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("comendant_phone");
-            entity.Property(e => e.DormId)
-                .HasMaxLength(18)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("dorm_id");
-
-            entity.HasOne(d => d.Dorm).WithMany(p => p.Comendants)
-                .HasForeignKey(d => d.DormId)
-                .HasConstraintName("R_26");
-        });
-
-        modelBuilder.Entity<DeanWorker>(entity =>
-        {
-            entity.HasKey(e => e.DeanWorkerId).HasName("XPKDeanWorker");
-
-            entity.ToTable("DeanWorker");
-
-            entity.Property(e => e.DeanWorkerId)
-                .HasMaxLength(18)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("dean_worker_id");
-            entity.Property(e => e.DeanWorkerEmail)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("dean_worker_email");
-            entity.Property(e => e.DeanWorkerLastname)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("dean_worker_lastname");
-            entity.Property(e => e.DeanWorkerMiddlename)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("dean_worker_middlename");
-            entity.Property(e => e.DeanWorkerName)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("dean_worker_name");
-            entity.Property(e => e.DeanWorkerPassword)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("dean_worker_password");
-            entity.Property(e => e.DeanWorkerPhone)
-                .HasMaxLength(13)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("dean_worker_phone");
-            entity.Property(e => e.FacultyId)
-                .HasMaxLength(18)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("faculty_id");
-
-            entity.HasOne(d => d.Faculty).WithMany(p => p.DeanWorkers)
-                .HasForeignKey(d => d.FacultyId)
-                .HasConstraintName("R_13");
-        });
-
         modelBuilder.Entity<Dormitory>(entity =>
         {
             entity.HasKey(e => e.DormId).HasName("XPKDormitory");
@@ -179,6 +89,33 @@ public partial class DormitoryManagerContext : DbContext
                     });
         });
 
+        modelBuilder.Entity<DormitoryComendant>(entity =>
+        {
+            entity.HasKey(e => e.WorkerId).HasName("XPKDormitoryComendant");
+
+            entity.ToTable("DormitoryComendant");
+
+            entity.Property(e => e.WorkerId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("worker_id");
+            entity.Property(e => e.DormId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("dorm_id");
+
+            entity.HasOne(d => d.Dorm).WithMany(p => p.DormitoryComendants)
+                .HasForeignKey(d => d.DormId)
+                .HasConstraintName("R_13");
+
+            entity.HasOne(d => d.Worker).WithOne(p => p.DormitoryComendant)
+                .HasForeignKey<DormitoryComendant>(d => d.WorkerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("R_10");
+        });
+
         modelBuilder.Entity<Faculty>(entity =>
         {
             entity.HasKey(e => e.FacultyId).HasName("XPKFaculty");
@@ -191,13 +128,58 @@ public partial class DormitoryManagerContext : DbContext
                 .IsFixedLength()
                 .HasColumnName("faculty_id");
             entity.Property(e => e.FacultyAddress)
-                .HasMaxLength(100)
+                .HasMaxLength(18)
                 .IsUnicode(false)
+                .IsFixedLength()
                 .HasColumnName("faculty_address");
             entity.Property(e => e.FacultyName)
-                .HasMaxLength(100)
+                .HasMaxLength(18)
                 .IsUnicode(false)
+                .IsFixedLength()
                 .HasColumnName("faculty_name");
+        });
+
+        modelBuilder.Entity<FacultyWorker>(entity =>
+        {
+            entity.HasKey(e => e.WorkerId).HasName("XPKFacultyWorker");
+
+            entity.ToTable("FacultyWorker");
+
+            entity.Property(e => e.WorkerId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("worker_id");
+            entity.Property(e => e.FacultyId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("faculty_id");
+
+            entity.HasOne(d => d.Faculty).WithMany(p => p.FacultyWorkers)
+                .HasForeignKey(d => d.FacultyId)
+                .HasConstraintName("R_14");
+
+            entity.HasOne(d => d.Worker).WithOne(p => p.FacultyWorker)
+                .HasForeignKey<FacultyWorker>(d => d.WorkerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("R_11");
+        });
+
+        modelBuilder.Entity<Role>(entity =>
+        {
+            entity.HasKey(e => e.RoleId).HasName("XPKRoles");
+
+            entity.Property(e => e.RoleId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("role_id");
+            entity.Property(e => e.RoleName)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("role_name");
         });
 
         modelBuilder.Entity<Room>(entity =>
@@ -324,6 +306,53 @@ public partial class DormitoryManagerContext : DbContext
                 .HasForeignKey(d => new { d.RoomId, d.DormId })
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("R_27");
+        });
+
+        modelBuilder.Entity<Worker>(entity =>
+        {
+            entity.HasKey(e => e.WorkerId).HasName("XPKWorker");
+
+            entity.ToTable("Worker");
+
+            entity.Property(e => e.WorkerId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("worker_id");
+            entity.Property(e => e.RoleId)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("role_id");
+            entity.Property(e => e.WorkerEmail)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("worker_email");
+            entity.Property(e => e.WorkerLastname)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("worker_lastname");
+            entity.Property(e => e.WorkerName)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("worker_name");
+            entity.Property(e => e.WorkerPassword)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("worker_password");
+            entity.Property(e => e.WorkerPhone)
+                .HasMaxLength(13)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("worker_phone");
+            entity.Property(e => e.WorkerSurname)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("worker_surname");
+
+            entity.HasOne(d => d.Role).WithMany(p => p.Workers)
+                .HasForeignKey(d => d.RoleId)
+                .HasConstraintName("R_15");
         });
 
         OnModelCreatingPartial(modelBuilder);

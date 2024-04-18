@@ -11,7 +11,7 @@ public partial class Faculty
 
     public string? FacultyAddress { get; set; }
 
-    public virtual ICollection<DeanWorker> DeanWorkers { get; set; } = new List<DeanWorker>();
+    public virtual ICollection<FacultyWorker> FacultyWorkers { get; set; } = new List<FacultyWorker>();
 
     public virtual ICollection<Student> Students { get; set; } = new List<Student>();
 
