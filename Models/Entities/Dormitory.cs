@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace DormitoryManager.Models.Entities;
 //DormitoryManager
+//v1.0
 public partial class Dormitory
 {
     public string DormId { get; set; } = null!;
