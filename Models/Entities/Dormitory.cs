@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace DormitoryManager.Models.Entities;
-
+//DM
 public partial class Dormitory
 {
     public string DormId { get; set; } = null!;
