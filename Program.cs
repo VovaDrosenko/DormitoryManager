@@ -1,11 +1,27 @@
-using DormitoryManager.Models;
-using DormitoryManager.Models.Initializer;
+using DormitoryManager;
+using DormitoryManager.Models.Context;
+using DormitoryManager.Models.Initializers;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<DormitoryManagerContext>();
+
+// Create connection string
+string connStr = builder.Configuration.GetConnectionString("DormitoryContext");
+
+// Database context
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connStr));
+
+// Add Core services
+builder.Services.AddCoreServices();
+
+// Add Infrastructure Service
+builder.Services.AddInfrastructureService();
+
+// Add Mapping
+builder.Services.AddMapping();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,11 +43,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-   var dbContext = services.GetRequiredService<DormitoryManagerContext>();
-    SeedData.Initialize(dbContext);
-}
-
+await UsersAndRolesInitializer.SeedUsersAndRoles(app);
 app.Run();

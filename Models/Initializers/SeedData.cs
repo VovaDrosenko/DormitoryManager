@@ -1,10 +1,11 @@
-﻿using DormitoryManager.Models.Entities;
+﻿using DormitoryManager.Models.Context;
+using DormitoryManager.Models.Entities;
 
-namespace DormitoryManager.Models.Initializer
+namespace DormitoryManager.Models.Initializers
 {
     public static class SeedData
     {
-        public static void Initialize(DormitoryManagerContext context)
+    /*    public static void Initialize(AppDbContext context)
         {
             if (!context.Dormitories.Any())
             {
@@ -15,7 +16,7 @@ namespace DormitoryManager.Models.Initializer
                 );
                 context.SaveChanges();
             }
-        }
+        }*/
     }
 
 }

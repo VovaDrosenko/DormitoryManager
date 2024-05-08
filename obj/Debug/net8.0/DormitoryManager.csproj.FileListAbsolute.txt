@@ -855,3 +855,5 @@ C:\Users\sasha\Desktop\DormitoryManager\obj\Debug\net8.0\DormitoryManager.pdb
 C:\Users\sasha\Desktop\DormitoryManager\obj\Debug\net8.0\DormitoryManager.genruntimeconfig.cache
 C:\Users\sasha\Desktop\DormitoryManager\obj\Debug\net8.0\ref\DormitoryManager.dll
 C:\Users\Volodymyr\source\repos\DormitoryManager\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Volodymyr\source\repos\DormitoryManager\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Volodymyr\source\repos\DormitoryManager\bin\Debug\net8.0\Ardalis.Specification.EntityFrameworkCore.dll

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 
 public partial class Student
 {
+    [Key]
     public string StudentId { get; set; } = null!;
 
     public string? StudentName { get; set; }

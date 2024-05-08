@@ -3,36 +3,188 @@
   "WorkspaceRootPath": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\initializer\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\initializer\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508075441_addToUserDormFac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240508075441_addToUserDormFac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\facultyworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\facultyworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\dormitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\dormitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\dormitorycomendant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\dormitorycomendant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508075131_initDormTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240508075131_initDormTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\studentroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\studentroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\migrations\\20240508060224_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:migrations\\20240508060224_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\initializers\\usersandrolesinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\initializers\\usersandrolesinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\services\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:services\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\initializers\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\initializers\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\home\\documents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\home\\documents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dormitorymanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dormitorymanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\authorization\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\authorization\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\validation\\user\\changepasswordvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:validation\\user\\changepasswordvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\validation\\user\\createuservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:validation\\user\\createuservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\validation\\user\\loginuservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:validation\\user\\loginuservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\automapperuserprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:automapperuserprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\user\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\user\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\user\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\user\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\user\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\user\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\user\\edituserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\user\\edituserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\models\\dto\u0060s\\user\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\user\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\dormitorymanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:dormitorymanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\home\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\home\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,114 +194,604 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StudentRoom.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\StudentRoom.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\StudentRoom.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\StudentRoom.cs",
+              "RelativeToolTip": "Models\\Entities\\StudentRoom.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T07:49:21.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\Context\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:23:29.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DormitoryComendant.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\DormitoryComendant.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\DormitoryComendant.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\DormitoryComendant.cs",
+              "RelativeToolTip": "Models\\Entities\\DormitoryComendant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:09:27.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20240508060224_init.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508060224_init.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240508060224_init.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508060224_init.cs",
+              "RelativeToolTip": "Migrations\\20240508060224_init.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAAAOEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T06:02:25.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dormitory.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Dormitory.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Dormitory.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Dormitory.cs",
+              "RelativeToolTip": "Models\\Entities\\Dormitory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:16:57.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersAndRolesInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Initializers\\UsersAndRolesInitializer.cs",
+              "RelativeDocumentMoniker": "Models\\Initializers\\UsersAndRolesInitializer.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Initializers\\UsersAndRolesInitializer.cs",
+              "RelativeToolTip": "Models\\Initializers\\UsersAndRolesInitializer.cs",
+              "ViewState": "AQIAAAsAAADA//////8DwA8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:15:32.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:40:06.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\SignIn.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\SignIn.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\SignIn.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\SignIn.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:40:23.055Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:13:19.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240508075441_addToUserDormFac.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508075441_addToUserDormFac.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240508075441_addToUserDormFac.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508075441_addToUserDormFac.cs",
+              "RelativeToolTip": "Migrations\\20240508075441_addToUserDormFac.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T07:54:41.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20240508075131_initDormTables.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508075131_initDormTables.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240508075131_initDormTables.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Migrations\\20240508075131_initDormTables.cs",
+              "RelativeToolTip": "Migrations\\20240508075131_initDormTables.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T07:51:32.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\AppUser.cs",
+              "RelativeToolTip": "Models\\Entities\\AppUser.cs",
+              "ViewState": "AQIAAAYAAACAMTMzMzMLwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:13:15.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Faculty.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Faculty.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Faculty.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Faculty.cs",
+              "RelativeToolTip": "Models\\Entities\\Faculty.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:09:30.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FacultyWorker.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\FacultyWorker.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\FacultyWorker.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\FacultyWorker.cs",
+              "RelativeToolTip": "Models\\Entities\\FacultyWorker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:09:32.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Room.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Room.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Room.cs",
+              "RelativeToolTip": "Models\\Entities\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:09:34.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Worker.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Worker.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Worker.cs",
+              "RelativeToolTip": "Models\\Entities\\Worker.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAuwAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T17:53:15.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Entities\\Student.cs",
+              "RelativeToolTip": "Models\\Entities\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:09:37.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\ServiceExtensions.cs",
+              "RelativeToolTip": "ServiceExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:40:43.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABcAAACALzMzMzMLwAsAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T17:37:31.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-18T18:20:57.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Services\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "Services\\ServiceResponse.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Services\\ServiceResponse.cs",
+              "RelativeToolTip": "Services\\ServiceResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:34:40.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAAO4AAAAA8P////8FwAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:34:47.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Initializer\\SeedData.cs",
-              "RelativeDocumentMoniker": "Models\\Initializer\\SeedData.cs",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Initializer\\SeedData.cs",
-              "RelativeToolTip": "Models\\Initializer\\SeedData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Initializers\\SeedData.cs",
+              "RelativeDocumentMoniker": "Models\\Initializers\\SeedData.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\Initializers\\SeedData.cs",
+              "RelativeToolTip": "Models\\Initializers\\SeedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBIAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T15:18:03.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:17:12.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 23,
+              "Title": "Documents.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Home\\Documents.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Documents.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Home\\Documents.cshtml",
+              "RelativeToolTip": "Views\\Home\\Documents.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:15:16.023Z",
+              "WhenOpened": "2024-04-18T16:32:36.632Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 25,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwCIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:35:51.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAiwDMAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:14:27.873Z",
+              "WhenOpened": "2024-04-18T16:33:06.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DormitoryManagerContext.cs",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DormitoryManagerContext.cs",
-              "RelativeDocumentMoniker": "Models\\DormitoryManagerContext.cs",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DormitoryManagerContext.cs",
-              "RelativeToolTip": "Models\\DormitoryManagerContext.cs",
+              "DocumentIndex": 26,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\ResetPassword.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\ResetPassword.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:14:23.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\LoginUserDto.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\LoginUserDto.cs",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\LoginUserDto.cs",
-              "RelativeToolTip": "Models\\DTO\u0060s\\LoginUserDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:09:41.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Authorization\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authorization\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Authorization\\Index.cshtml",
-              "RelativeToolTip": "Views\\Authorization\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:01:30.72Z",
+              "WhenOpened": "2024-05-07T08:40:20.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthorizationController.cs",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\AuthorizationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthorizationController.cs",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\AuthorizationController.cs",
-              "RelativeToolTip": "Controllers\\AuthorizationController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAABwAAAA2AAAA",
+              "DocumentIndex": 27,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Profile.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Profile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:40:08.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetAll.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\GetAll.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\GetAll.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\GetAll.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\GetAll.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:39:50.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\ForgotPassword.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\ForgotPassword.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:39:47.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:39:42.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:39:15.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LoginUserValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Validation\\User\\LoginUserValidation.cs",
+              "RelativeDocumentMoniker": "Validation\\User\\LoginUserValidation.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Validation\\User\\LoginUserValidation.cs",
+              "RelativeToolTip": "Validation\\User\\LoginUserValidation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T14:02:51.417Z",
+              "WhenOpened": "2024-05-07T08:37:00.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CreateUserValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Validation\\User\\CreateUserValidation.cs",
+              "RelativeDocumentMoniker": "Validation\\User\\CreateUserValidation.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Validation\\User\\CreateUserValidation.cs",
+              "RelativeToolTip": "Validation\\User\\CreateUserValidation.cs",
+              "ViewState": "AQIAAAQAAACAMTMzMzMLwAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:34:23.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\Create.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T08:13:24.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ChangePasswordValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Validation\\User\\ChangePasswordValidation.cs",
+              "RelativeDocumentMoniker": "Validation\\User\\ChangePasswordValidation.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Validation\\User\\ChangePasswordValidation.cs",
+              "RelativeToolTip": "Validation\\User\\ChangePasswordValidation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:31:15.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AutoMapperUserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\AutoMapperUserProfile.cs",
+              "RelativeDocumentMoniker": "AutoMapperUserProfile.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\AutoMapperUserProfile.cs",
+              "RelativeToolTip": "AutoMapperUserProfile.cs",
+              "ViewState": "AQIAAAAAAAAAMzMzMzMLwAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:35:37.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\User\\LoginUserDto.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\LoginUserDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\User\\LoginUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T17:22:57.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UsersDto.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\UsersDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\User\\UsersDto.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\UsersDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\User\\UsersDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:15:03.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ResetPasswordDto.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\ResetPasswordDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\User\\ResetPasswordDto.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\ResetPasswordDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\User\\ResetPasswordDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:14:57.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EditUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\EditUserDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\User\\EditUserDto.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\EditUserDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\User\\EditUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:14:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\User\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\CreateUserDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\User\\CreateUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:14:16.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ChangePasswordDto.cs",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\ChangePasswordDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\User\\ChangePasswordDto.cs",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Models\\DTO\u0060s\\User\\ChangePasswordDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\User\\ChangePasswordDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:14:02.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "DormitoryManager.csproj",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\DormitoryManager.csproj",
+              "RelativeDocumentMoniker": "DormitoryManager.csproj",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\DormitoryManager.csproj",
+              "RelativeToolTip": "DormitoryManager.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-07T08:10:36.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-18T18:36:35.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Form.cshtml",
+              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Home\\Form.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Form.cshtml",
+              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Home\\Form.cshtml",
+              "RelativeToolTip": "Views\\Home\\Form.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T17:31:59.077Z",
               "EditorCaption": ""
             }
           ]

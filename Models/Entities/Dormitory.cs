@@ -1,11 +1,14 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 //DM
 public partial class Dormitory
 {
-    public string DormId { get; set; } = null!;
+    [Key]
+    public string DormId { get; set; }
 
     public string? DormNumber { get; set; }
 

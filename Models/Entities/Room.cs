@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 
 public partial class Room
 {
+    [Key]
     public string RoomId { get; set; } = null!;
 
     public string DormId { get; set; } = null!;
