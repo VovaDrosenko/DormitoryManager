@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using DormitoryManager.Models.DTO_s.User;
 using DormitoryManager.Models.Entities;
 
-namespace DormitoryManager.Services
+namespace DormitoryManager.Services.User
 {
     public class UserService
     {
@@ -247,7 +247,7 @@ namespace DormitoryManager.Services
                 Payload = mappedUser
             };
         }
-        
+
         public async Task<ServiceResponse> CreateAsync(CreateUserDto model)
         {
             var user = await _userManager.FindByEmailAsync(model.Email);

@@ -6,10 +6,9 @@ namespace DormitoryManager.Models.Entities;
 
 public partial class Room
 {
-    [Key]
-    public string RoomId { get; set; } = null!;
+    public int Id { get; set; }
 
-    public string DormId { get; set; } = null!;
+    public int DormId { get; set; }
 
     public int? NumberOfRoom { get; set; }
 

@@ -1,31 +1,33 @@
-﻿using System;
+﻿using DormitoryManager.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 
-public partial class Student
+public partial class Student : IEntity
 {
-    [Key]
-    public string StudentId { get; set; } = null!;
+    public int Id { get; set; }
 
-    public string? StudentName { get; set; }
+    public string? StudentName { get; set; } = null!;
 
-    public string? StudentMiddlename { get; set; }
+    public string? StudentMiddlename { get; set; }=null!;
 
-    public string? StudentLastname { get; set; }
+    public string? StudentLastname { get; set; }= null!;
 
-    public string? StudentPhone { get; set; }
+    public string? StudentPhone { get; set; } = null!;
 
-    public string? StudentEmail { get; set; }
+    public string? StudentEmail { get; set; } = null!;
+
+    public bool Settlement { get; set; }
 
     public int? Course { get; set; }
 
     public DateTime? DateOfBirth { get; set; }
 
-    public string? Gender { get; set; }
+    public string? Gender { get; set; } = null!;
 
-    public string? FacultyId { get; set; }
+    public int? FacultyId { get; set; }
 
     public virtual Faculty? Faculty { get; set; }
 

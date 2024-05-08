@@ -1,60 +1,78 @@
-﻿@{
+﻿@model DormitoryManager.Models.DTO_s.Student.StudentsDto
+
+@{
     ViewData["Title"] = "Форма поселення";
 }
 
-
 <div class="container">
-
     <form method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="mb-3">
-                    <label for="firstName" class="form-label">Ім'я</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Володимир">
+                    <label asp-for="StudentName" class="form-label">Ім'я</label>
+                    <input asp-for="StudentName" class="form-control" placeholder="Володимир">
                 </div>
 
                 <div class="mb-3">
-                    <label for="lastName" class="form-label">Прізвище</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Дросенко">
+                    <label asp-for="StudentLastname" class="form-label">Прізвище</label>
+                    <input asp-for="StudentLastname" class="form-control" placeholder="Дросенко">
                 </div>
 
                 <div class="mb-3">
-                    <label for="middleName" class="form-label">По-батькові</label>
-                    <input type="text" class="form-control" id="middleName" placeholder="Ігорович">
+                    <label asp-for="StudentMiddlename" class="form-label">По-батькові</label>
+                    <input asp-for="StudentMiddlename" class="form-control" placeholder="Ігорович">
                 </div>
 
                 <div class="mb-3">
-                    <label for="phoneNumber" class="form-label">Номер телефону</label>
-                    <input type="tel" class="form-control" id="phoneNumber" placeholder="0935154698" />
+                    <label asp-for="StudentPhone" class="form-label">Номер телефону</label>
+                    <input asp-for="StudentPhone" class="form-control" placeholder="0935154698">
                 </div>
 
                 <div class="mb-3">
-                    <label for="dob">Дата народження:</label>
-                    <input type="date" class="form-control" id="dob" name="dob" required>
+                    <label asp-for="DateOfBirth">Дата народження:</label>
+                    <input asp-for="DateOfBirth" class="form-control" type="date" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">Електрона пошта</label>
-                    <input type="email" class="form-control" id="email" placeholder="vovadrosenko@gmail.com" />
+                    <label asp-for="Gender">Gender:</label>
+                    <select asp-for="Gender" class="form-control" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
                 </div>
 
                 <div class="mb-3">
-                    <label for="wishes">Побажання:</label>
-                    <textarea class="form-control" id="wishes" name="wishes" rows="3"></textarea>
+                    <label asp-for="StudentEmail" class="form-label">Електрона пошта</label>
+                    <input asp-for="StudentEmail" class="form-control" placeholder="vovadrosenko@gmail.com">
                 </div>
 
                 <div class="mb-3">
-                    <label for="photo">Фото формату 3x4:</label>
-                    <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
+                    <label for="faculty">Faculty:</label>
+                    <select name="faculty" id="faculty" class="form-control">
+                        @foreach (var faculty in ViewBag.Faculties)
+                        {
+                            <option value="@faculty">@faculty.FacultyName</option>
+                        }
+                    </select>
                 </div>
 
                 <div class="mb-3">
-                    <label for="applicationScan">Скан заяви на поселення:</label>
-                    <input type="file" class="form-control" id="applicationScan" name="applicationScan" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <label asp-for="Wishes">Побажання:</label>
+                    <textarea asp-for="Wishes" class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Photo">Фото формату 3x4:</label>
+                    <input asp-for="Photo" class="form-control" type="file" accept="image/*" required>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ApplicationScan">Скан заяви на поселення:</label>
+                    <input asp-for="ApplicationScan" class="form-control" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
                 </div>
 
                 <div class="col-12 text-center">
-                    <button class="btn btn-primary" type="submit">Відправити</button>
+                    <button type="submit" class="btn btn-primary">Відправити</button>
                 </div>
             </div>
         </div>

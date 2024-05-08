@@ -857,3 +857,4 @@ C:\Users\sasha\Desktop\DormitoryManager\obj\Debug\net8.0\ref\DormitoryManager.dl
 C:\Users\Volodymyr\source\repos\DormitoryManager\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Volodymyr\source\repos\DormitoryManager\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Volodymyr\source\repos\DormitoryManager\bin\Debug\net8.0\Ardalis.Specification.EntityFrameworkCore.dll
+C:\Users\Volodymyr\source\repos\DormitoryManager\obj\Debug\net8.0\scopedcss\Views\Shared\Dashboard\_Layout.cshtml.rz.scp.css

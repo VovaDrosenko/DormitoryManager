@@ -1,0 +1,14 @@
+﻿<div id="sidebar">
+    <ul>
+        <li class="nav-item">
+            <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "GetAll") ? "active" : "")"
+                asp-action="GetAll">Список поселених студентів</a>
+        </li>
+
+        <li class="nav-item">
+            <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Create") ? "active" : "")"
+               asp-action="Create">Заявки на поселення</a>
+        </li>
+
+    </ul>
+</div>

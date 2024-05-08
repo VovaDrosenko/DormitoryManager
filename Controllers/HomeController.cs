@@ -1,6 +1,7 @@
+using DormitoryManager.Interfaces;
 using DormitoryManager.Models;
-using DormitoryManager.Models.Context;
-using DormitoryManager.Models.Entities;
+using DormitoryManager.Models.DTO_s.Student;
+using DormitoryManager.Validation.Student;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,11 +9,13 @@ namespace DormitoryManager.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IStudentService _studentService;
+        private readonly IFacultyService _facultyService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IStudentService studentService, IFacultyService facultyService)
         {
-            _logger = logger;
+            _studentService = studentService;
+            _facultyService = facultyService;
         }
 
         public IActionResult Index()
@@ -29,9 +32,28 @@ namespace DormitoryManager.Controllers
             return View();
         }
 
-        public IActionResult Form()
+        public async Task <IActionResult> Form()
         {
+            var faculties = await _facultyService.GettAll();
+            ViewBag.Faculties = faculties;
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Form(StudentsDto student)
+        {
+            var validator = new CreateStudentValidation();
+            var validationResult = await validator.ValidateAsync(student);
+            if (validationResult.IsValid)
+            {
+                await _studentService.Create(student);
+                
+                return RedirectToAction(nameof(Index));
+                
+            }
+            ViewBag.AuthError = validationResult.Errors[0];
+            return View(student);
         }
 
         public IActionResult Documents()

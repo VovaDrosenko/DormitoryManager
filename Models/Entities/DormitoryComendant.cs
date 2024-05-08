@@ -6,8 +6,8 @@ namespace DormitoryManager.Models.Entities;
 
 public partial class DormitoryComendant
 {
-    [Key]
-    public string WorkerId { get; set; } = null!;
+    public int Id { get; set; }
+    public int WorkerId { get; set; }
 
     public string? DormId { get; set; }
 

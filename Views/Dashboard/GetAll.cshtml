@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity;
-@using DormitoryManager.Models.DTO_s.User;
+@using DormitoryManager.Models.DTO_s.Student;
 @using DormitoryManager.Models.Entities;
-@model List<UsersDto>
+@model List<StudentsDto>
 @inject UserManager<AppUser> UserManager
 
 @{
@@ -49,11 +49,8 @@
                                 <thead>
                                     <tr>
                                         <th>First name</th>
+                                        <th>Middle name</th>
                                         <th>Last name</th>
-                                        <th>Email</th>
-                                        <th>Email confirmed</th>
-                                        <th>Lockout</th>
-                                        <th>Role</th>
                                         @if (@User.IsInRole("Administrator"))
                                         {
                                             <th>Edit</th>
@@ -66,13 +63,10 @@
                                     @foreach (var item in Model)
                                     {
                                         <tr>
-                                            <td>@item.FirstName</td>
-                                            <td>@item.LastName</td>
-                                            <td>@item.Email</td>
-                                            <td>@item.EmailConfirmed</td>
-                                            <td>@item.LockedEnd</td>
-                                            <td> @item.Role</td>
-                                            @if (@User.IsInRole("Administrator") && item.Email != email)
+                                            <td>@item.StudentName</td>
+                                            <td>@item.StudentMiddlename</td>
+                                            <td>@item.StudentLastname</td>
+                                            @if (@User.IsInRole("Administrator") && item.StudentEmail != email)
                                             {
                                                 <td><a asp-controller="Dashboard"  asp-action="Edit" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Edit</a></td>
                                                 <td><a asp-controller="Dashboard" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Delete</a></td>

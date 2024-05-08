@@ -8,6 +8,9 @@ using DormitoryManager.Models.DTO_s.User;
 using DormitoryManager.Services;
 using DormitoryManager.Valudation.User;
 using DormitoryManager.Validation.User;
+using DormitoryManager.Services.User;
+using DormitoryManager.Services.Student;
+using DormitoryManager.Interfaces;
 
 namespace DormitoryManager.Controllers
 {
@@ -16,13 +19,14 @@ namespace DormitoryManager.Controllers
     public class DashboardController : Controller
     {
         private readonly UserService _userService;
+        private readonly IStudentService _studentService;
 
 
 
-        public DashboardController(UserService userService)
+        public DashboardController(UserService userService, IStudentService studentService)
         {
             _userService = userService;
-
+            _studentService = studentService;
 
         }
 
@@ -66,8 +70,8 @@ namespace DormitoryManager.Controllers
 
         public async Task<IActionResult> GetAll()
         {
-            var result = await _userService.GetAllAsync();
-            return View(result.Payload);
+            var result = await _studentService.GettAll();
+            return View(result);
         }
         [HttpPost]
         public async Task<IActionResult> Logout()

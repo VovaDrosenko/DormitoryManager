@@ -1,13 +1,13 @@
-﻿using System;
+﻿using DormitoryManager.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 
-public partial class Faculty
+public partial class Faculty : IEntity
 {
-    [Key]
-    public string FacultyId { get; set; } = null!;
+    public int Id { get; set; }
 
     public string? FacultyName { get; set; }
 

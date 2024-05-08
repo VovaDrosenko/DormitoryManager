@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 
 public partial class Worker
 {
-    [Key]
-    public string WorkerId { get; set; } = null!;
+    public int Id { get; set; }
 
     public string? WorkerName { get; set; }
 
@@ -20,8 +18,6 @@ public partial class Worker
     public string? WorkerEmail { get; set; }
 
     public string? WorkerPassword { get; set; }
-
-    public string? RoleId { get; set; }
 
     public virtual DormitoryComendant? DormitoryComendant { get; set; }
 

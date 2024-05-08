@@ -7,8 +7,7 @@ namespace DormitoryManager.Models.Entities;
 //DM
 public partial class Dormitory
 {
-    [Key]
-    public string DormId { get; set; }
+    public int Id { get; set; }
 
     public string? DormNumber { get; set; }
 
@@ -20,5 +19,5 @@ public partial class Dormitory
 
     public virtual ICollection<Room> Rooms { get; set; } = new List<Room>();
 
-    public virtual ICollection<Faculty> Faculties { get; set; } = new List<Faculty>();
+    public virtual ICollection<Student> Faculties { get; set; } = new List<Student>();
 }

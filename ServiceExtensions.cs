@@ -2,8 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using DormitoryManager.Models.Context;
 using DormitoryManager.Models.Entities;
-using DormitoryManager.Services;
-using DormitoryManager;
+using DormitoryManager.Services.User;
+using DormitoryManager.Interfaces;
+using DormitoryManager.Services.Student;
+using DormitoryManager.AutoMapper.Student;
+using DormitoryManager.Repository;
+using DormitoryManager.Services.Faculty;
+using DormitoryManager.AutoMapper.Faculty;
 
 namespace DormitoryManager
 {
@@ -17,6 +22,8 @@ namespace DormitoryManager
         public static void AddCoreServices(this IServiceCollection services)
         {
             services.AddTransient<UserService>();
+            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IFacultyService, FacultyService>();
         }
 
         public static void AddInfrastructureService(this IServiceCollection services)
@@ -37,9 +44,16 @@ namespace DormitoryManager
                 .AddDefaultTokenProviders();
         }
 
+        public static void AddRepositories(this IServiceCollection services)
+        {
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        }
+
         public static void AddMapping(this IServiceCollection services)
         {
             services.AddAutoMapper(typeof(AutoMapperUserProfile));
+            services.AddAutoMapper(typeof(AutoMapperStudentProfile));
+            services.AddAutoMapper(typeof(AutoMapperFacultyProfile));
         }
     }
 }

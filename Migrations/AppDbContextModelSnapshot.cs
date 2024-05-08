@@ -22,25 +22,13 @@ namespace DormitoryManager.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DormitoryFaculty", b =>
-                {
-                    b.Property<string>("DormsDormId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("FacultiesFacultyId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("DormsDormId", "FacultiesFacultyId");
-
-                    b.HasIndex("FacultiesFacultyId");
-
-                    b.ToTable("DormitoryFaculty");
-                });
-
             modelBuilder.Entity("DormitoryManager.Models.Entities.Dormitory", b =>
                 {
-                    b.Property<string>("DormId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -51,38 +39,55 @@ namespace DormitoryManager.Migrations
                     b.Property<string>("DormNumber")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("FacultyId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("Floors")
                         .HasColumnType("int");
 
-                    b.HasKey("DormId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("FacultyId");
 
                     b.ToTable("Dormitories");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.DormitoryComendant", b =>
                 {
-                    b.Property<string>("WorkerId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("DormId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("WorkerId");
+                    b.Property<int?>("DormId1")
+                        .HasColumnType("int");
 
-                    b.HasIndex("DormId");
+                    b.Property<int>("WorkerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DormId1");
+
+                    b.HasIndex("WorkerId")
+                        .IsUnique();
 
                     b.ToTable("DormitoryComendants");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Faculty", b =>
                 {
-                    b.Property<string>("FacultyId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("AppUserId")
-                        .HasColumnType("nvarchar(450)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FacultyAddress")
                         .HasColumnType("nvarchar(max)");
@@ -90,36 +95,53 @@ namespace DormitoryManager.Migrations
                     b.Property<string>("FacultyName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("FacultyId");
-
-                    b.HasIndex("AppUserId");
+                    b.HasKey("Id");
 
                     b.ToTable("Faculties");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.FacultyWorker", b =>
                 {
-                    b.Property<string>("WorkerId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FacultyId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("WorkerId");
+                    b.Property<int?>("FacultyId1")
+                        .HasColumnType("int");
 
-                    b.HasIndex("FacultyId");
+                    b.Property<int?>("FacultyId2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WorkerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FacultyId1");
+
+                    b.HasIndex("FacultyId2");
+
+                    b.HasIndex("WorkerId")
+                        .IsUnique();
 
                     b.ToTable("FacultyWorkers");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Room", b =>
                 {
-                    b.Property<string>("RoomId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("DormId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DormId")
+                        .HasColumnType("int");
 
                     b.Property<string>("NumberOfBeds")
                         .HasColumnType("nvarchar(max)");
@@ -130,7 +152,7 @@ namespace DormitoryManager.Migrations
                     b.Property<string>("ResidentsGender")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RoomId");
+                    b.HasKey("Id");
 
                     b.HasIndex("DormId");
 
@@ -139,7 +161,13 @@ namespace DormitoryManager.Migrations
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Student", b =>
                 {
-                    b.Property<string>("StudentId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("Course")
@@ -148,11 +176,17 @@ namespace DormitoryManager.Migrations
                     b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FacultyId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int?>("DormitoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FacultyId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Gender")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Settlement")
+                        .HasColumnType("bit");
 
                     b.Property<string>("StudentEmail")
                         .HasColumnType("nvarchar(max)");
@@ -169,7 +203,11 @@ namespace DormitoryManager.Migrations
                     b.Property<string>("StudentPhone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("StudentId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("DormitoryId");
 
                     b.HasIndex("FacultyId");
 
@@ -178,8 +216,11 @@ namespace DormitoryManager.Migrations
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.StudentRoom", b =>
                 {
-                    b.Property<string>("StdRoomId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime?>("DateBegin")
                         .HasColumnType("datetime2");
@@ -187,19 +228,16 @@ namespace DormitoryManager.Migrations
                     b.Property<DateTime?>("DateEnd")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DormId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("DormId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("RoomId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("StudentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
-                    b.HasKey("StdRoomId");
+                    b.HasKey("Id");
 
                     b.HasIndex("RoomId");
 
@@ -210,11 +248,11 @@ namespace DormitoryManager.Migrations
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Worker", b =>
                 {
-                    b.Property<string>("WorkerId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("WorkerEmail")
                         .HasColumnType("nvarchar(max)");
@@ -234,7 +272,7 @@ namespace DormitoryManager.Migrations
                     b.Property<string>("WorkerSurname")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("WorkerId");
+                    b.HasKey("Id");
 
                     b.ToTable("Workers");
                 });
@@ -469,33 +507,22 @@ namespace DormitoryManager.Migrations
                     b.HasDiscriminator().HasValue("AppUser");
                 });
 
-            modelBuilder.Entity("DormitoryFaculty", b =>
-                {
-                    b.HasOne("DormitoryManager.Models.Entities.Dormitory", null)
-                        .WithMany()
-                        .HasForeignKey("DormsDormId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DormitoryManager.Models.Entities.Faculty", null)
-                        .WithMany()
-                        .HasForeignKey("FacultiesFacultyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("DormitoryManager.Models.Entities.Dormitory", b =>
                 {
                     b.HasOne("DormitoryManager.Models.Entities.AppUser", null)
                         .WithMany("Dormitory")
                         .HasForeignKey("AppUserId");
+
+                    b.HasOne("DormitoryManager.Models.Entities.Faculty", null)
+                        .WithMany("Dorms")
+                        .HasForeignKey("FacultyId");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.DormitoryComendant", b =>
                 {
                     b.HasOne("DormitoryManager.Models.Entities.Dormitory", "Dorm")
                         .WithMany("DormitoryComendants")
-                        .HasForeignKey("DormId");
+                        .HasForeignKey("DormId1");
 
                     b.HasOne("DormitoryManager.Models.Entities.Worker", "Worker")
                         .WithOne("DormitoryComendant")
@@ -508,18 +535,15 @@ namespace DormitoryManager.Migrations
                     b.Navigation("Worker");
                 });
 
-            modelBuilder.Entity("DormitoryManager.Models.Entities.Faculty", b =>
-                {
-                    b.HasOne("DormitoryManager.Models.Entities.AppUser", null)
-                        .WithMany("Faculty")
-                        .HasForeignKey("AppUserId");
-                });
-
             modelBuilder.Entity("DormitoryManager.Models.Entities.FacultyWorker", b =>
                 {
-                    b.HasOne("DormitoryManager.Models.Entities.Faculty", "Faculty")
+                    b.HasOne("DormitoryManager.Models.Entities.Faculty", null)
                         .WithMany("FacultyWorkers")
-                        .HasForeignKey("FacultyId");
+                        .HasForeignKey("FacultyId1");
+
+                    b.HasOne("DormitoryManager.Models.Entities.Student", "Faculty")
+                        .WithMany()
+                        .HasForeignKey("FacultyId2");
 
                     b.HasOne("DormitoryManager.Models.Entities.Worker", "Worker")
                         .WithOne("FacultyWorker")
@@ -545,6 +569,14 @@ namespace DormitoryManager.Migrations
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Student", b =>
                 {
+                    b.HasOne("DormitoryManager.Models.Entities.AppUser", null)
+                        .WithMany("Faculty")
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("DormitoryManager.Models.Entities.Dormitory", null)
+                        .WithMany("Faculties")
+                        .HasForeignKey("DormitoryId");
+
                     b.HasOne("DormitoryManager.Models.Entities.Faculty", "Faculty")
                         .WithMany("Students")
                         .HasForeignKey("FacultyId");
@@ -626,11 +658,15 @@ namespace DormitoryManager.Migrations
                 {
                     b.Navigation("DormitoryComendants");
 
+                    b.Navigation("Faculties");
+
                     b.Navigation("Rooms");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Faculty", b =>
                 {
+                    b.Navigation("Dorms");
+
                     b.Navigation("FacultyWorkers");
 
                     b.Navigation("Students");

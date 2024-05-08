@@ -17,6 +17,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conn
 // Add Core services
 builder.Services.AddCoreServices();
 
+builder.Services.AddRepositories();
+
 // Add Infrastructure Service
 builder.Services.AddInfrastructureService();
 

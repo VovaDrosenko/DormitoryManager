@@ -6,13 +6,12 @@ namespace DormitoryManager.Models.Entities;
 
 public partial class StudentRoom
 {
-    [Key]
-    public string StdRoomId { get; set; } = null!;
-    public string RoomId { get; set; } = null!;
+    public int Id {  get; set; }
+    public int RoomId { get; set; }
 
-    public string DormId { get; set; } = null!;
+    public int DormId { get; set; }
 
-    public string StudentId { get; set; } = null!;
+    public int StudentId { get; set; }
 
     public DateTime? DateBegin { get; set; }
 

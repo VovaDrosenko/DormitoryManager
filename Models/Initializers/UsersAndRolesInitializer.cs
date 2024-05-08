@@ -13,9 +13,9 @@ namespace DormitoryManager.Models.Initializers
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
                 UserManager<AppUser> userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
 
-                if(userManager.FindByEmailAsync("admin@email.com").Result == null)
+                if (userManager.FindByEmailAsync("admin@email.com").Result == null)
                 {
-                    AppUser admin  = new AppUser()
+                    AppUser admin = new AppUser()
                     {
                         UserName = "admin@email.com",
                         FirstName = "John",
@@ -25,7 +25,6 @@ namespace DormitoryManager.Models.Initializers
                         PhoneNumber = "+xx(xxx)xxx-xx-xx",
                         PhoneNumberConfirmed = true,
                     };
-
                     context.Roles.AddRange(
                         new IdentityRole()
                         {
@@ -48,15 +47,28 @@ namespace DormitoryManager.Models.Initializers
                             NormalizedName = "USER"
                         });
 
+                    context.Faculties.AddRange(
+                        new Faculty()
+                        {
+                            FacultyName = "IT",
+                            FacultyAddress = "KORPUS 15"
+                        },
+                        new Faculty()
+                        {
+                            FacultyName = "AGRO",
+                            FacultyAddress = "KORPUS 1"
+                        }
+                    );
+
                     await context.SaveChangesAsync();
 
-                    IdentityResult adminResult = userManager.CreateAsync(admin, "Qwerty-1").Result;
-                    if(adminResult.Succeeded)
-                    {
-                        userManager.AddToRoleAsync(admin, "Administrator").Wait();
-                    }
+                IdentityResult adminResult = userManager.CreateAsync(admin, "Qwerty-1").Result;
+                if (adminResult.Succeeded)
+                {
+                    userManager.AddToRoleAsync(admin, "Administrator").Wait();
                 }
             }
+        }
         }
     }
 }
