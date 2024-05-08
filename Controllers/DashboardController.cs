@@ -107,10 +107,13 @@ namespace DormitoryManager.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Delete(string Id)
+        public async Task<IActionResult> Delete(int Id)
         {
-            var user = await _userService.GetByIdAsync(Id);
-            return View(user.Payload);
+            await _studentService.Delete(Id);
+            
+                return View(nameof(Index));
+            
+
         }
 
 
