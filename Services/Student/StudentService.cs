@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using DormitoryManager.Interfaces;
+using DormitoryManager.Models.DTO_s.Faculty;
 using DormitoryManager.Models.DTO_s.Student;
+using DormitoryManager.Models.Entities;
+using DormitoryManager.Services.Faculty;
 using DormitoryManager.Specifications;
 
 namespace DormitoryManager.Services.Student
@@ -9,15 +12,15 @@ namespace DormitoryManager.Services.Student
     {
         private readonly IMapper _mapper;
         private readonly IRepository<Models.Entities.Student> _repository;
+       
 
-        public StudentService( IMapper mapper, IRepository<Models.Entities.Student> repository)
+        public StudentService(IMapper mapper, IRepository<Models.Entities.Student> repository)
         {
             _mapper = mapper;
             _repository = repository;
         }
-
         public async Task Create(StudentsDto model)
-        {
+        { 
             await _repository.Insert(_mapper.Map<Models.Entities.Student>(model));
             await _repository.Save();
         }
@@ -36,11 +39,12 @@ namespace DormitoryManager.Services.Student
         {
             if (id < 0) return null;
 
-            var category = await _repository.GetByID(id);
-            if (category == null) return null;
+            var student = await _repository.GetByID(id);
+            if (student == null) return null;
 
-            return _mapper.Map<StudentsDto>(category);
+            return _mapper.Map<StudentsDto>(student);
         }
+
 
         public async Task<ServiceResponse> GetByName(StudentsDto model)
         {
@@ -68,10 +72,22 @@ namespace DormitoryManager.Services.Student
             await _repository.Save();
         }
 
-         public async Task<List<StudentsDto>> GettAll()
+         public async Task<List<StudentsDto>> GettAllSettStud()
         {
             var result = await _repository.GetAll();
-            return _mapper.Map<List<StudentsDto>>(result);
+            IEnumerable<StudentsDto> query = from student in result
+                                             where student.Settlement == true
+                                             select _mapper.Map<StudentsDto>(student);
+            return _mapper.Map<List<StudentsDto>>(query);
+        }
+
+        public async Task<List<StudentsDto>> GetAllRequest()
+        {
+            var result = await _repository.GetAll();
+            IEnumerable<StudentsDto> query = from student in result
+                                             where student.Settlement == false
+                                             select _mapper.Map<StudentsDto>(student);
+            return _mapper.Map<List<StudentsDto>>(query);
         }
     }
 }

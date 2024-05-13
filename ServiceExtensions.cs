@@ -22,8 +22,8 @@ namespace DormitoryManager
         public static void AddCoreServices(this IServiceCollection services)
         {
             services.AddTransient<UserService>();
-            services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IFacultyService, FacultyService>();
+            services.AddScoped<IStudentService, StudentService>();
         }
 
         public static void AddInfrastructureService(this IServiceCollection services)

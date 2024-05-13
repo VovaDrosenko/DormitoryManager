@@ -21,5 +21,9 @@ namespace DormitoryManager.Models.DTO_s.Student;
 
     public virtual Entities.Student? Faculty { get; set; }
 
+    //public string Wishes { get; set; } = string.Empty;
+    public IFormFile Photo { get; set; }
+    public IFormFile ApplicationScan { get; set; }
+
 }
 

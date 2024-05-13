@@ -1,5 +1,12 @@
-﻿@using DormitoryManager.Models.DTO_s.User;
+﻿@using Microsoft.AspNetCore.Identity;
+@using DormitoryManager.Models.Entities;
+@using DormitoryManager.Models.DTO_s.User;
 @model CreateUserDto
+@inject UserManager<AppUser> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -67,7 +74,8 @@
                                         <div class="form-group">
                                             <label>Role</label>
                                             <select class="form-control select2" name="role" style="width: 100%;">
-                                                <option selected="selected">User</option>
+                                                <option selected="selected">Komendant</option>
+                                                <option selected="selected">Dekanat</option>
                                                 <option>Administrator</option>                                          
                                             </select>
                                         </div>

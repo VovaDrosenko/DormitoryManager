@@ -11,6 +11,9 @@ using DormitoryManager.Validation.User;
 using DormitoryManager.Services.User;
 using DormitoryManager.Services.Student;
 using DormitoryManager.Interfaces;
+using DormitoryManager.Models.DTO_s.Student;
+using DormitoryManager.Models.Entities;
+using DormitoryManager.Services.Faculty;
 
 namespace DormitoryManager.Controllers
 {
@@ -20,14 +23,15 @@ namespace DormitoryManager.Controllers
     {
         private readonly UserService _userService;
         private readonly IStudentService _studentService;
+        private readonly IFacultyService _facultyService;
 
 
 
-        public DashboardController(UserService userService, IStudentService studentService)
+        public DashboardController(UserService userService, IStudentService studentService, IFacultyService facultyService)
         {
             _userService = userService;
             _studentService = studentService;
-
+            _facultyService = facultyService;
         }
 
         public IActionResult Index()
@@ -70,8 +74,28 @@ namespace DormitoryManager.Controllers
 
         public async Task<IActionResult> GetAll()
         {
-            var result = await _studentService.GettAll();
+            var result = await _studentService.GettAllSettStud();
             return View(result);
+        }
+        public async Task<IActionResult> Requests()
+        {
+            var students = await _studentService.GetAllRequest();
+            // Assuming _facultyRepository is your repository for faculties
+            var faculties = await _facultyService.GettAll();
+            var result = from s in students join f in faculties on s.FacultyId equals f.Id
+                         select new StudentsDto
+                         {
+                             Id = s.Id,
+                             StudentLastname = s.StudentLastname,
+                             StudentMiddlename = s.StudentMiddlename,
+                             StudentName = s.StudentName,
+                             StudentPhone = s.StudentPhone,
+                             FacultyId = s.FacultyId,
+                             Gender = s.Gender,
+                             FacultyName = f.FacultyName
+                         };
+
+            return View(result.ToList());
         }
         [HttpPost]
         public async Task<IActionResult> Logout()
@@ -126,8 +150,9 @@ namespace DormitoryManager.Controllers
             }
             return View(nameof(Index));
         }
+
         /*[HttpGet]
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> EditUser(string id)
         {
             var result = await _userService.GetByIdAsync(id);
             await GetRoles();
@@ -138,6 +163,17 @@ namespace DormitoryManager.Controllers
             return View();
         }*/
 
+        [HttpGet]
+        public async Task<IActionResult> EditStudent(int id)
+        {
+            var result = await _studentService.Get(id);
+            await GetRoles();
+            if (result != null)
+            {
+                return View(result);
+            }
+            return View();
+        }
         private async Task GetRoles()
         {
             var result = await _userService.LoadRoles();

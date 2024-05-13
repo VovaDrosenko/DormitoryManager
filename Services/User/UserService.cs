@@ -55,9 +55,11 @@ namespace DormitoryManager.Services.User
 
             if (result.IsNotAllowed)
             {
+                //Sanya email confirming
+                await _signInManager.SignInAsync(user, model.RememberMe);
                 return new ServiceResponse
                 {
-                    Success = false,
+                    Success = /*false*/true,
                     Message = "Confirm your email please."
                 };
             }

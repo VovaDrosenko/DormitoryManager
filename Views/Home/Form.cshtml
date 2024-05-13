@@ -1,4 +1,4 @@
-﻿@model DormitoryManager.Models.DTO_s.Student.StudentsDto
+﻿@model DormitoryManager.Models.DTO_s.Student.CreateStudentDto
 
 @{
     ViewData["Title"] = "Форма поселення";
@@ -47,19 +47,19 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="faculty">Faculty:</label>
-                    <select name="faculty" id="faculty" class="form-control">
+                    <label for="FacultyId">Faculty:</label>
+                    <select name="FacultyId" id="FacultyId" class="form-control">
                         @foreach (var faculty in ViewBag.Faculties)
                         {
-                            <option value="@faculty">@faculty.FacultyName</option>
+                            <option value="@faculty.Id">@faculty.FacultyName</option>
                         }
                     </select>
                 </div>
 
-                <div class="mb-3">
+                @* <div class="mb-3">
                     <label asp-for="Wishes">Побажання:</label>
                     <textarea asp-for="Wishes" class="form-control" rows="3"></textarea>
-                </div>
+                </div> *@
 
                 <div class="mb-3">
                     <label asp-for="Photo">Фото формату 3x4:</label>

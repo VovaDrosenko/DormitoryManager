@@ -34,8 +34,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXQuY3NodG1s
+[C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/EditStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/ForgotPassword.cshtml]
@@ -52,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/Requests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFJlcXVlc3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Volodymyr/source/repos/DormitoryManager/Views/Dashboard/ResetPassword.cshtml]

@@ -11,7 +11,8 @@ namespace DormitoryManager.Interfaces
 {
     public interface IStudentService
     {
-        Task<List<StudentsDto>> GettAll();
+        Task<List<StudentsDto>> GettAllSettStud();
+        Task<List<StudentsDto>> GetAllRequest();
         Task<StudentsDto> Get(int id);
         Task<ServiceResponse> GetByName(StudentsDto model);
         Task Create(StudentsDto model);

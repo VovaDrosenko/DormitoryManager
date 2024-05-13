@@ -27,7 +27,7 @@ public partial class Student : IEntity
 
     public string? Gender { get; set; } = null!;
 
-    public int? FacultyId { get; set; }
+    public int FacultyId { get; set; }
 
     public virtual Faculty? Faculty { get; set; }
 
