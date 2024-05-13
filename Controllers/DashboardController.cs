@@ -1,5 +1,4 @@
-﻿using FluentValidation;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,12 +7,8 @@ using DormitoryManager.Models.DTO_s.User;
 using DormitoryManager.Services;
 using DormitoryManager.Valudation.User;
 using DormitoryManager.Validation.User;
-using DormitoryManager.Services.User;
-using DormitoryManager.Services.Student;
 using DormitoryManager.Interfaces;
 using DormitoryManager.Models.DTO_s.Student;
-using DormitoryManager.Models.Entities;
-using DormitoryManager.Services.Faculty;
 
 namespace DormitoryManager.Controllers
 {
@@ -24,14 +19,18 @@ namespace DormitoryManager.Controllers
         private readonly UserService _userService;
         private readonly IStudentService _studentService;
         private readonly IFacultyService _facultyService;
+        private readonly IDormitoryService _dormService;
+        private readonly IRoomService _roomService;
 
 
 
-        public DashboardController(UserService userService, IStudentService studentService, IFacultyService facultyService)
+        public DashboardController(UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService)
         {
             _userService = userService;
             _studentService = studentService;
             _facultyService = facultyService;
+            _dormService = dormitoryService;
+            _roomService = roomService;
         }
 
         public IActionResult Index()
@@ -135,8 +134,7 @@ namespace DormitoryManager.Controllers
         {
             await _studentService.Delete(Id);
             
-                return View(nameof(Index));
-            
+                return RedirectToAction(nameof(Requests));
 
         }
 
@@ -166,13 +164,39 @@ namespace DormitoryManager.Controllers
         [HttpGet]
         public async Task<IActionResult> EditStudent(int id)
         {
-            var result = await _studentService.Get(id);
-            await GetRoles();
-            if (result != null)
+            var student = await _studentService.Get(id);
+            var faculties = await _facultyService.GettAll();
+            var studentFaculty = faculties.FirstOrDefault(f => f.Id == student.FacultyId);
+
+            ViewBag.Dormitories = await _dormService.GettAll();
+            ViewBag.Rooms = await _roomService.GettAll();
+            if (studentFaculty != null)
             {
-                return View(result);
+                student.FacultyName = studentFaculty.FacultyName;
+            }
+
+            await GetRoles();
+            if (student != null)
+            {
+                var base64Photo = ConvertToBase64(student.Photo);
+                var base64Doc = ConvertToBase64(student.ApplicationScan);
+                student.PhotoString = base64Photo;
+                student.ApplicationScanString = base64Doc;
+                return View(student);
             }
             return View();
+        }
+        private string ConvertToBase64(IFormFile file)
+        {
+            if (file == null) return null;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                file.CopyTo(ms);
+                byte[] fileBytes = ms.ToArray();
+                string base64String = Convert.ToBase64String(fileBytes);
+                return "data:image/png;base64," + base64String;
+            }
         }
         private async Task GetRoles()
         {

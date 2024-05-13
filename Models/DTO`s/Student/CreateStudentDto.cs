@@ -19,7 +19,7 @@ namespace DormitoryManager.Models.DTO_s.Student;
 
     public string? Gender { get; set; }
 
-    public virtual Entities.Student? Faculty { get; set; }
+    public int FacultyId { get; set; }
 
     //public string Wishes { get; set; } = string.Empty;
     public IFormFile Photo { get; set; }

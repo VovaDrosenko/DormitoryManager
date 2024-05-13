@@ -4,6 +4,7 @@ using DormitoryManager.Models.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DormitoryManager.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240513102834_photosinbytes2")]
+    partial class photosinbytes2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -582,7 +585,7 @@ namespace DormitoryManager.Migrations
                         .HasForeignKey("AppUserId");
 
                     b.HasOne("DormitoryManager.Models.Entities.Dormitory", null)
-                        .WithMany("Student")
+                        .WithMany("Faculties")
                         .HasForeignKey("DormitoryId");
 
                     b.HasOne("DormitoryManager.Models.Entities.Faculty", "Faculty")
@@ -668,9 +671,9 @@ namespace DormitoryManager.Migrations
                 {
                     b.Navigation("DormitoryComendants");
 
-                    b.Navigation("Rooms");
+                    b.Navigation("Faculties");
 
-                    b.Navigation("Student");
+                    b.Navigation("Rooms");
                 });
 
             modelBuilder.Entity("DormitoryManager.Models.Entities.Faculty", b =>

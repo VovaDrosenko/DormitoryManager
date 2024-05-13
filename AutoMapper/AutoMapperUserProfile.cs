@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DormitoryManager.Models.DTO_s.User;
 using DormitoryManager.Models.Entities;
 
-namespace DormitoryManager
+namespace DormitoryManager.AutoMapper
 {
     public class AutoMapperUserProfile : Profile
     {

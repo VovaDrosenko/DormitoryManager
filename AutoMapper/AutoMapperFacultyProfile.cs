@@ -2,7 +2,7 @@
 using DormitoryManager.Models.DTO_s.Faculty;
 using DormitoryManager.Models.DTO_s.Student;
 
-namespace DormitoryManager.AutoMapper.Faculty
+namespace DormitoryManager.AutoMapper
 {
     public class AutoMapperFacultyProfile : Profile
     {

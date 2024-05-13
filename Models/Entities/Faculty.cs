@@ -1,7 +1,4 @@
 ﻿using DormitoryManager.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace DormitoryManager.Models.Entities;
 

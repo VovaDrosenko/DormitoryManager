@@ -1,35 +1,49 @@
-﻿@using DormitoryManager.Models.DTO_s.User;
-@model EditUserDto
+﻿@using DormitoryManager.Models.DTO_s.Student;
+@model StudentsDto
 <section class="min-vh-100 mb-8">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-5 col-md-7 ">
                 <div class="card z-index-0 mt-4">
                     <div class="text-center pt-4">
-                        <h5>Update profile information</h5>
+                        <h5>Перегляд інформації про студента</h5>
                     </div>
-                    <div class="card-body">
-                        <form role="form text-left" method="post">
-                            @if (@ViewBag.AuthError != null)
+                    <div class="center card-body">
+                        <div>
+                            @if (!string.IsNullOrEmpty(Model.PhotoString))
                             {
-                                <span class="text-danger">@ViewBag.AuthError</span>
+                                <img src="@Model.PhotoString" alt="Student Photo" style="max-width: 200px; max-height: 200px;">
                             }
+                            @if (!string.IsNullOrEmpty(Model.ApplicationScanString))
+                            {
+                                <img src="@Model.ApplicationScanString" alt="Student Document" style="max-width: 200px; max-height: 200px;">
+                            }
+
+                            <p><strong>ПІБ:</strong> @Model.StudentName @Model.StudentMiddlename @Model.StudentLastname</p>
+                            <p><strong>Дата народження:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+                            <p><strong>Стать:</strong> @Model.Gender</p>
+                            <p><strong>Номер телефону:</strong> @Model.StudentPhone</p>
+                            <p><strong>Електрона пошта:</strong> @Model.StudentEmail</p>
+                            <p><strong>Факультет:</strong> @Model.FacultyName</p>
                             <div class="mb-3">
-                                <input asp-for="Id" type="hidden" class="form-control" aria-label="Id" aria-describedby="email-addon" />
-                                <input asp-for="FirstName" type="text" name="FirstName" class="form-control" placeholder="FirstName" aria-label="FirstName">
-                                <span class="text-danger" asp-validation-for="FirstName"></span>
+                                <label asp-for="DormitoryId"><strong>Номер гуртожитку:</strong></label>
+                                <select asp-for="DormitoryId" id="DormitoryId" class="form-control">
+                                    @foreach (var dorm in ViewBag.Dormitories)
+                                    {
+                                        <option value="@dorm.Id">@dorm.DormNumber</option>
+                                    }
+                                </select>
                             </div>
                             <div class="mb-3">
-                                <input asp-for="LastName" type="text" name="LastName" class="form-control" placeholder="LastName" aria-label="LastName">
-                                <span class="text-danger" asp-validation-for="LastName"></span>
+                                <label asp-for="RoomId"><strong>Номер кімнати:</strong></label>
+                                <select asp-for="RoomId" id="RoomId" class="form-control">
+                                    @foreach (var room in ViewBag.Rooms)
+                                    {
+                                        <option value="@room.Id">@room.NumberOfRoom</option>
+                                    }
+                                </select>
                             </div>
-                            <div class="mb-3">
-                                @Html.DropDownList("RoleId", (SelectList)ViewBag.RoleList, "-- Select Role --", htmlAttributes: new { @class = "form-control" })
-                            </div>
-                            <div class="text-center">
-                                <button asp-action="AssignRole" type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Save</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

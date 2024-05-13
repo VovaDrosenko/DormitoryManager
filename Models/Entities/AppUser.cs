@@ -15,7 +15,7 @@ namespace DormitoryManager.Models.Entities
         public string DormId { get; set; } = string.Empty;
         public ICollection<Dormitory> Dormitory { get; set; } = new List<Dormitory>();
         public string FacultyId { get; set; } = string.Empty;
-        public ICollection<Student> Faculty { get; set; } = new List<Student>();
+        public ICollection<Student> Students { get; set; } = new List<Student>();
     }
 }
 

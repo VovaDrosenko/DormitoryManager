@@ -41,20 +41,30 @@ namespace DormitoryManager.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Form(StudentsDto student)
+        public async Task<IActionResult> Form(CreateStudentDto student)
         {
             var validator = new CreateStudentValidation();
             var validationResult = await validator.ValidateAsync(student);
             if (validationResult.IsValid)
             {
+                /*// Convert photo data from IFormFile to byte array
+                if (student.Photo != null && student.Photo.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        student.Photo = memoryStream.ToArray();
+                    }
+                }*/
+
                 await _studentService.Create(student);
-                
+
                 return RedirectToAction(nameof(Index));
-                
+
             }
             ViewBag.AuthError = validationResult.Errors[0];
             return View(student);
         }
+
 
         public IActionResult Documents()
         {

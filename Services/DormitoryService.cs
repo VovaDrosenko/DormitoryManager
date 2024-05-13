@@ -1,25 +1,26 @@
 ﻿
 using AutoMapper;
 using DormitoryManager.Interfaces;
+using DormitoryManager.Models.DTO_s.Dormitory;
 using DormitoryManager.Models.DTO_s.Faculty;
 using DormitoryManager.Specifications;
 
-namespace DormitoryManager.Services.Faculty
+namespace DormitoryManager.Services
 {
-    public class FacultyService : IFacultyService
+    public class DormitoryService : IDormitoryService
     {
         private readonly IMapper _mapper;
-        private readonly IRepository<Models.Entities.Faculty> _repository;
+        private readonly IRepository<Models.Entities.Dormitory> _repository;
 
-        public FacultyService( IMapper mapper, IRepository<Models.Entities.Faculty> repository)
+        public DormitoryService(IMapper mapper, IRepository<Models.Entities.Dormitory> repository)
         {
             _mapper = mapper;
             _repository = repository;
         }
 
-        public async Task Create(FacultiesDto model)
+        public async Task Create(DormitoryDto model)
         {
-            await _repository.Insert(_mapper.Map<Models.Entities.Faculty>(model));
+            await _repository.Insert(_mapper.Map<Models.Entities.Dormitory>(model));
             await _repository.Save();
         }
 
@@ -33,7 +34,7 @@ namespace DormitoryManager.Services.Faculty
             }
         }
 
-        public async Task<Models.Entities.Faculty> Get(int id)
+        public async Task<Models.Entities.Dormitory> Get(int id)
         {
             if (id < 0) return null;
 
@@ -43,9 +44,9 @@ namespace DormitoryManager.Services.Faculty
             return faculty;
         }
 
-        public async Task<ServiceResponse> GetByName(FacultiesDto model)
+        public async Task<ServiceResponse> GetByName(DormitoryDto model)
         {
-            var result = await _repository.GetItemBySpec(new FacultySpecification.GetByName(model.FacultyName));
+            var result = await _repository.GetItemBySpec(new DormitorySpecification.GetByName(model.DormNumber));
             if (result != null)
             {
                 return new ServiceResponse
@@ -54,7 +55,7 @@ namespace DormitoryManager.Services.Faculty
                     Message = "Category exists."
                 };
             }
-            var category = _mapper.Map<FacultiesDto>(result);
+            var category = _mapper.Map<DormitoryDto>(result);
             return new ServiceResponse
             {
                 Success = true,
@@ -63,16 +64,16 @@ namespace DormitoryManager.Services.Faculty
             };
         }
 
-        public async Task Update(FacultiesDto model)
+        public async Task Update(DormitoryDto model)
         {
-            await _repository.Update(_mapper.Map<Models.Entities.Faculty>(model));
+            await _repository.Update(_mapper.Map<Models.Entities.Dormitory>(model));
             await _repository.Save();
         }
 
-        async Task<List<FacultiesDto>> IFacultyService.GettAll()
+        async Task<List<DormitoryDto>> IDormitoryService.GettAll()
         {
             var result = await _repository.GetAll();
-            return _mapper.Map<List<FacultiesDto>>(result);
+            return _mapper.Map<List<DormitoryDto>>(result);
         }
     }
 }

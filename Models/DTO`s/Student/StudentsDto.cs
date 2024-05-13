@@ -14,16 +14,18 @@ namespace DormitoryManager.Models.DTO_s.Student
         public string StudentMiddlename { get; set; } = string.Empty;
         public string StudentLastname { get; set; } = string.Empty;
         public string StudentPhone { get; set; } = string.Empty;
-        //public DateTime DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; } = string.Empty;
-        //public string StudentEmail { get; set; } = string.Empty;
+        public string StudentEmail { get; set; } = string.Empty;
         public int FacultyId { get; set; }
         public string FacultyName {  get; set; } = string.Empty;
-
         public int DormitoryId {  get; set; }
         public string DormNum { get; set; } = string.Empty;
-        //public string Wishes { get; set; } = string.Empty;
+        public int RoomId { get; set; }
+        public string RoomNum { get; set; } = string.Empty;
         public IFormFile Photo { get; set; }
-        //public IFormFile ApplicationScan { get; set; }
+        public string PhotoString { get; set; }
+        public IFormFile ApplicationScan { get; set; }
+        public string ApplicationScanString { get; set; }
     }
 }

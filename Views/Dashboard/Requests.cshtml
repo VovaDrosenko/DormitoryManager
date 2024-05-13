@@ -52,12 +52,12 @@
                                             <td>@item.FacultyName</td>
                                             @if (@User.IsInRole("Administrator") && item.StudentEmail != email)
                                             {
-                                                <td><a asp-controller="Dashboard" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a>
+                                                <td><a asp-controller="Dashboard" asp-action="EditStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a>
                                                     <a asp-controller="Dashboard" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a></td>
                                             }
                                             @if (@User.IsInRole("Dekanat") && item.StudentEmail != email)
                                             {
-                                                <td><a asp-controller="Dashboard" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a></td>
+                                                <td><a asp-controller="Dashboard" asp-action="EditStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a></td>
                                             }
                                         </tr>
                                         <tr>

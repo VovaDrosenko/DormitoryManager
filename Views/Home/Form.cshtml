@@ -10,22 +10,22 @@
             <div class="col-md-6 offset-md-3">
                 <div class="mb-3">
                     <label asp-for="StudentName" class="form-label">Ім'я</label>
-                    <input asp-for="StudentName" class="form-control" placeholder="Володимир">
+                    <input asp-for="StudentName" class="form-control" placeholder="Введіть ім'я">
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="StudentLastname" class="form-label">Прізвище</label>
-                    <input asp-for="StudentLastname" class="form-control" placeholder="Дросенко">
+                    <input asp-for="StudentLastname" class="form-control" placeholder="Введіть прізвище">
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="StudentMiddlename" class="form-label">По-батькові</label>
-                    <input asp-for="StudentMiddlename" class="form-control" placeholder="Ігорович">
+                    <input asp-for="StudentMiddlename" class="form-control" placeholder="Введіть по-батькові">
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="StudentPhone" class="form-label">Номер телефону</label>
-                    <input asp-for="StudentPhone" class="form-control" placeholder="0935154698">
+                    <input asp-for="StudentPhone" class="form-control" placeholder="Введіть номер телефону">
                 </div>
 
                 <div class="mb-3">
@@ -34,21 +34,21 @@
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="Gender">Gender:</label>
+                    <label asp-for="Gender">Стать:</label>
                     <select asp-for="Gender" class="form-control" id="gender">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                        <option value="male">Чоловік</option>
+                        <option value="female">Жінка</option>
                     </select>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="StudentEmail" class="form-label">Електрона пошта</label>
-                    <input asp-for="StudentEmail" class="form-control" placeholder="vovadrosenko@gmail.com">
+                    <label asp-for="StudentEmail" class="form-label">Електронна пошта</label>
+                    <input asp-for="StudentEmail" class="form-control" placeholder="Введіть електронну пошту">
                 </div>
 
                 <div class="mb-3">
-                    <label for="FacultyId">Faculty:</label>
-                    <select name="FacultyId" id="FacultyId" class="form-control">
+                    <label asp-for="FacultyId">Факультет:</label>
+                    <select asp-for="FacultyId" id="FacultyId" class="form-control">
                         @foreach (var faculty in ViewBag.Faculties)
                         {
                             <option value="@faculty.Id">@faculty.FacultyName</option>
@@ -56,24 +56,20 @@
                     </select>
                 </div>
 
-                @* <div class="mb-3">
-                    <label asp-for="Wishes">Побажання:</label>
-                    <textarea asp-for="Wishes" class="form-control" rows="3"></textarea>
-                </div> *@
-
                 <div class="mb-3">
-                    <label asp-for="Photo">Фото формату 3x4:</label>
+                    <label asp-for="Photo">Фото (формат 3x4):</label>
                     <input asp-for="Photo" class="form-control" type="file" accept="image/*" required>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="ApplicationScan">Скан заяви на поселення:</label>
-                    <input asp-for="ApplicationScan" class="form-control" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <input asp-for="ApplicationScan" class="form-control" type="file" accept="image/*" required>
                 </div>
 
                 <div class="col-12 text-center">
                     <button type="submit" class="btn btn-primary">Відправити</button>
                 </div>
+
             </div>
         </div>
     </form>

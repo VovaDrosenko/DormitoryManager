@@ -18,6 +18,8 @@ public partial class Student : IEntity
     public string? StudentPhone { get; set; } = null!;
 
     public string? StudentEmail { get; set; } = null!;
+    public byte[] Photo { get;set; } = null!;
+    public byte[] ApplicationScan { get; set; } = null!;
 
     public bool Settlement { get; set; }
 

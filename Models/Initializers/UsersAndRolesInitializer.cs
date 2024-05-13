@@ -57,18 +57,36 @@ namespace DormitoryManager.Models.Initializers
                         {
                             FacultyName = "AGRO",
                             FacultyAddress = "KORPUS 1"
-                        }
-                    );
+                        });
 
-                    await context.SaveChangesAsync();
-
-                IdentityResult adminResult = userManager.CreateAsync(admin, "Qwerty-1").Result;
-                if (adminResult.Succeeded)
+                    var dorm7 = new Dormitory
                 {
-                    userManager.AddToRoleAsync(admin, "Administrator").Wait();
+                    DormNumber = "7",
+                    Floors = 5,
+                    Address = "Address of Dormitory 7" // Add address here if applicable
+                };
+                context.Dormitories.Add(dorm7);
+
+                await context.SaveChangesAsync();
+                // Add Room 548 to Dormitory 7
+                var room548 = new Room
+                {
+                    DormId = dorm7.Id,
+                    NumberOfRoom = 548,
+                    NumberOfBeds = "4",
+                    ResidentsGender = "Чоловік"
+                };
+                context.Rooms.Add(room548);
+
+                await context.SaveChangesAsync();
+
+                    IdentityResult adminResult = userManager.CreateAsync(admin, "Qwerty-1").Result;
+                    if (adminResult.Succeeded)
+                    {
+                        userManager.AddToRoleAsync(admin, "Administrator").Wait();
+                    }
+                  }
                 }
             }
-        }
-        }
     }
 }

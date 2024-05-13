@@ -8,7 +8,7 @@ using DormitoryManager.Models.DTO_s.Student;
 
 namespace DormitoryManager.Validation.Student
 {
-    public class CreateStudentValidation : AbstractValidator<StudentsDto>
+    public class CreateStudentValidation : AbstractValidator<CreateStudentDto>
     {
         public CreateStudentValidation()
         {

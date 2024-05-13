@@ -1,27 +1,25 @@
 ﻿using AutoMapper;
 using DormitoryManager.Interfaces;
-using DormitoryManager.Models.DTO_s.Faculty;
 using DormitoryManager.Models.DTO_s.Student;
 using DormitoryManager.Models.Entities;
-using DormitoryManager.Services.Faculty;
 using DormitoryManager.Specifications;
 
-namespace DormitoryManager.Services.Student
+namespace DormitoryManager.Services
 {
     public class StudentService : IStudentService
     {
         private readonly IMapper _mapper;
-        private readonly IRepository<Models.Entities.Student> _repository;
-       
+        private readonly IRepository<Student> _repository;
 
-        public StudentService(IMapper mapper, IRepository<Models.Entities.Student> repository)
+
+        public StudentService(IMapper mapper, IRepository<Student> repository)
         {
             _mapper = mapper;
             _repository = repository;
         }
-        public async Task Create(StudentsDto model)
-        { 
-            await _repository.Insert(_mapper.Map<Models.Entities.Student>(model));
+        public async Task Create(CreateStudentDto model)
+        {
+            await _repository.Insert(_mapper.Map<Student>(model));
             await _repository.Save();
         }
 
@@ -68,11 +66,11 @@ namespace DormitoryManager.Services.Student
 
         public async Task Update(StudentsDto model)
         {
-            await _repository.Update(_mapper.Map<Models.Entities.Student>(model));
+            await _repository.Update(_mapper.Map<Student>(model));
             await _repository.Save();
         }
 
-         public async Task<List<StudentsDto>> GettAllSettStud()
+        public async Task<List<StudentsDto>> GettAllSettStud()
         {
             var result = await _repository.GetAll();
             IEnumerable<StudentsDto> query = from student in result
@@ -83,6 +81,7 @@ namespace DormitoryManager.Services.Student
 
         public async Task<List<StudentsDto>> GetAllRequest()
         {
+
             var result = await _repository.GetAll();
             IEnumerable<StudentsDto> query = from student in result
                                              where student.Settlement == false

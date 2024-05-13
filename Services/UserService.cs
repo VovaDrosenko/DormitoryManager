@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using DormitoryManager.Models.DTO_s.User;
 using DormitoryManager.Models.Entities;
 
-namespace DormitoryManager.Services.User
+namespace DormitoryManager.Services
 {
     public class UserService
     {
