@@ -9,6 +9,7 @@ using DormitoryManager.Valudation.User;
 using DormitoryManager.Validation.User;
 using DormitoryManager.Interfaces;
 using DormitoryManager.Models.DTO_s.Student;
+using DormitoryManager.Models.DTO_s.Faculty;
 
 namespace DormitoryManager.Controllers
 {
@@ -255,10 +256,6 @@ namespace DormitoryManager.Controllers
 
             role = await _userService.GetRoleNameById(selectedRoleId);
 
-
-
-
-
             if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(role))
             {
                 return BadRequest("Некоректні дані");
@@ -274,5 +271,34 @@ namespace DormitoryManager.Controllers
                 return NotFound("Неможливо змінити роль для цього користувача");
             }
         }
+        #region Faculties
+        public async Task<IActionResult> Faculties() {
+            var faculties = await _facultyService.GettAll();
+            return View(faculties.ToList());
+        }
+
+        public async Task<IActionResult> CreateFaculty() {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateFaculty(FacultiesDto model) {
+            var temp = await _facultyService.GetByName(model);
+            if(temp.Success == false) {
+                return View(model);
+            }
+            else {
+                await _facultyService.Create(model);
+                return RedirectToAction(nameof(Faculties));
+            }
+        }
+
+        public async Task<IActionResult> DeleteFaculty(int Id) {
+            await _facultyService.Delete(Id);
+            return RedirectToAction(nameof(Faculties));
+
+        }
+        #endregion
     }
 }
