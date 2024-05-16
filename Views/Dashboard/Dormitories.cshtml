@@ -1,0 +1,55 @@
+﻿@model IEnumerable<DormitoryManager.Models.DTO_s.Dormitory.DormitoryDto>
+
+<p>
+    <a asp-action="Create">Додати гуртожиток</a>
+</p>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Гуртожитки</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Номер гуртожитка</th>
+                                        <th>Адреса</th>
+                                        <th>Кількість поверхів</th>
+                                        <th>Дія</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model) {
+                                        <tr>
+                                            <td>
+                                                @item.DormNumber
+                                            </td>
+                                            <td>
+                                                @item.Address
+                                            </td>
+                                            <td>
+                                                @item.Floors
+                                            </td>
+                                            <td>
+                                                <a asp-controller="Dashboard" asp-action="EditDormitory" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Редагувати</a>
+                                                <a asp-controller="Dashboard" asp-action="DormitoryDetails" asp-route-id="@item.Id" class="btn btn-block btn-info btn-sm">Переглянути</a>
+                                                <a asp-controller="Dashboard" asp-action="DeleteDormitory" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

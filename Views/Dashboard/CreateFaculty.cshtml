@@ -7,14 +7,24 @@
         <form asp-action="CreateFaculty">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+               
                 <label asp-for="FacultyName" class="control-label"></label>
+                <div>
+                    @if (@ViewBag.NameError != null) {
+                    <span class="text-danger mt-3">@ViewBag.NameError</span>
+                }
+                </div>
                 <input asp-for="FacultyName" class="form-control" />
-                <span asp-validation-for="FacultyName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                
                 <label asp-for="FacultyAddress" class="control-label"></label>
+                <div>
+                @if (@ViewBag.AddressError != null) {
+                    <span class="text-danger mt-3">@ViewBag.AddressError</span>
+                    }
+                </div>
                 <input asp-for="FacultyAddress" class="form-control" />
-                <span asp-validation-for="FacultyAddress" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

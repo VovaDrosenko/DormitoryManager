@@ -1,4 +1,5 @@
 ﻿using DormitoryManager.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DormitoryManager.Models.Entities;
 
@@ -6,9 +7,9 @@ public partial class Faculty : IEntity
 {
     public int Id { get; set; }
 
-    public string? FacultyName { get; set; }
+    public string? FacultyName { get; set; } 
 
-    public string? FacultyAddress { get; set; }
+    public string? FacultyAddress { get; set; } 
 
     public virtual ICollection<FacultyWorker> FacultyWorkers { get; set; } = new List<FacultyWorker>();
 

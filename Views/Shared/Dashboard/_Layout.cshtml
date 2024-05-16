@@ -62,6 +62,10 @@
                             <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Faculties") ? "active" : "")"
                                asp-action="Faculties">Факультети</a>
                         </li>
+                        <li class="nav-item">
+                            <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Dormitories") ? "active" : "")"
+                               asp-action="Dormitories">Гуртожитки</a>
+                        </li>
                         
 
                     </ul>

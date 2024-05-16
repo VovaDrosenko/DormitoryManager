@@ -10,7 +10,8 @@ namespace DormitoryManager.Interfaces
         Task<Faculty> Get(int id);
         Task<ServiceResponse> GetByName(FacultiesDto model);
         Task Create(FacultiesDto model);
-        Task Update(FacultiesDto model);
+        Task UpdateDto(FacultiesDto model);
+        Task Update(Faculty model);
         Task Delete(int id);
     }
 }

@@ -3,6 +3,7 @@ using AutoMapper;
 using DormitoryManager.Interfaces;
 using DormitoryManager.Models.DTO_s.Dormitory;
 using DormitoryManager.Models.DTO_s.Faculty;
+using DormitoryManager.Models.Entities;
 using DormitoryManager.Specifications;
 
 namespace DormitoryManager.Services
@@ -64,8 +65,12 @@ namespace DormitoryManager.Services
             };
         }
 
-        public async Task Update(DormitoryDto model)
+        public async Task Update(Dormitory model)
         {
+            await _repository.Update(model);
+            await _repository.Save();
+        }
+        public async Task UpdateDto(DormitoryDto model) {
             await _repository.Update(_mapper.Map<Models.Entities.Dormitory>(model));
             await _repository.Save();
         }

@@ -11,7 +11,9 @@ namespace DormitoryManager.Interfaces
         Task<Dormitory> Get(int id);
         Task<ServiceResponse> GetByName(DormitoryDto model);
         Task Create(DormitoryDto model);
-        Task Update(DormitoryDto model);
+        Task Update(Dormitory model);
+        Task UpdateDto(DormitoryDto model);
+        
         Task Delete(int id);
     }
 }
