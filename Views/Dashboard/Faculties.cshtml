@@ -16,7 +16,7 @@
 }
 
 <p>
-    <a asp-action="CreateFaculty">Create New</a>
+    <a asp-action="CreateFaculty">Додати факультет</a>
 </p>
 
 <div class="content-wrapper">
@@ -49,8 +49,8 @@
                                                 @item.FacultyAddress
                                             </td>
                                             <td>
-                                                <a asp-controller="Dashboard" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Редагувати</a>
-                                                <a asp-controller="Dashboard" asp-action="Create" asp-route-id="@item.Id" class="btn btn-block btn-info btn-sm">Переглянути</a>
+                                                <a asp-controller="Dashboard" asp-action="EditFaculty" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Редагувати</a>
+                                                
                                                 <a asp-controller="Dashboard" asp-action="DeleteFaculty" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a></td>
 
                                         </tr>
