@@ -73,5 +73,20 @@ namespace DormitoryManager.Services
             var result = await _repository.GetAll();
             return _mapper.Map<List<RoomDto>>(result);
         }
+        async Task<List<RoomDto>> IRoomService.GettAllInDorm(int dormId) {
+            var result = await _repository.GetAll(); // Отримуємо всі кімнати з бази даних
+            var roomsInDorm = result.Where(r => r.DormId == dormId).ToList(); // Відбираємо кімнати, які належать до переданого гуртожитку
+            return _mapper.Map<List<RoomDto>>(roomsInDorm); // Повертаємо список кімнат, змінений на RoomDto
+        }
+        async Task<RoomDto> IRoomService.GetByNumberOfRoom(int numberOfRoom){
+            RoomDto room = new RoomDto();
+            var rooms = await _repository.GetAll();
+            foreach(var r in rooms) {
+                if (r.NumberOfRoom == numberOfRoom)
+                    room = _mapper.Map<RoomDto>(r);
+            }
+            return room;
+        }
+
     }
 }

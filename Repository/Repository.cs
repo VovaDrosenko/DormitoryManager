@@ -2,6 +2,7 @@
 using Ardalis.Specification.EntityFrameworkCore;
 using DormitoryManager.Interfaces;
 using DormitoryManager.Models.Context;
+using DormitoryManager.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -81,13 +82,18 @@ namespace DormitoryManager.Repository
 
         public async Task Update(TEntity ententityToUpdate)
         {
-            await Task.Run
-                (
-                () =>
-                {
-                    dbSet.Attach(ententityToUpdate);
-                    context.Entry(ententityToUpdate).State = EntityState.Modified;
-                });
+            var existingEntity = await context.Set<TEntity>().FindAsync(ententityToUpdate.Id);
+            if (existingEntity != null) {
+                context.Entry(existingEntity).CurrentValues.SetValues(ententityToUpdate);
+                await context.SaveChangesAsync();
+            }
+            //await Task.Run
+            //    (
+            //    () =>
+            //    {
+            //        dbSet.Attach(ententityToUpdate);
+            //        context.Entry(ententityToUpdate).State = EntityState.Modified;
+            //    });
         }
     }
 }
