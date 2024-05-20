@@ -5,26 +5,26 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DormNumber)
+            Номер гуртожитка
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DormNumber)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
+            Адреса
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Address)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Floors)
+            Кількість поверхів
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Floors)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="EditDormitory" asp-route-id="@Model?.Id">Редагувати дані</a> |
-    <a asp-action="Dormitories">Назад до списку</a>
+    <a asp-controller="Dashboard" asp-action="EditDormitory" asp-route-id="@Model.Id" class="btn btn-block btn-warning btn-sm">Редагувати</a>
+    <a asp-controller="Dashboard" asp-action="Rooms" asp-route-dormId="@Model.Id" class="btn btn-block btn-info btn-sm">Кімнати</a>
 </div>

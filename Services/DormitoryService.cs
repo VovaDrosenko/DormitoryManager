@@ -39,10 +39,10 @@ namespace DormitoryManager.Services
         {
             if (id < 0) return null;
 
-            var faculty = await _repository.GetByID(id);
-            if (faculty == null) return null;
+            var dormitory = await _repository.GetByID(id);
+            if (dormitory == null) return null;
 
-            return faculty;
+            return dormitory;
         }
 
         public async Task<ServiceResponse> GetByName(DormitoryDto model)

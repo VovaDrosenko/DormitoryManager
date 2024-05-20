@@ -15,6 +15,11 @@ using Microsoft.IdentityModel.Tokens;
 using DormitoryManager.Models.Entities;
 using AutoMapper;
 using DormitoryManager.Models.DTO_s.Dormitory;
+using FluentValidation;
+using DormitoryManager.Validation.Dormitory;
+using DormitoryManager.ViewModel;
+using DormitoryManager.Models.DTO_s.Room;
+using DormitoryManager.Validation.Room;
 
 namespace DormitoryManager.Controllers
 {
@@ -327,6 +332,69 @@ namespace DormitoryManager.Controllers
 
         }
 
+        public async Task<IActionResult> DeleteDormitory(int Id) {
+            await _dormService.Delete(Id);
+            return RedirectToAction(nameof(Dormitories));
+        }
+
+        public async Task<IActionResult> CreateDormitory() {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateDormitory(DormitoryDto model) {
+            var validator = new CreateDormitoryValidation();
+            var validationResult = await validator.ValidateAsync(model);
+            if (validationResult.IsValid) {
+                await _dormService.Create(model);
+                return RedirectToAction(nameof(Dormitories));
+            }
+            if (model.DormNumber?.Length < 1 || model.DormNumber.IsNullOrEmpty()) {
+                ViewBag.NumberError = "Номер гуртожитку повинен включати більше чим 1 символ\n";
+            }
+            if (model.Address?.Length < 3 || model.Address.IsNullOrEmpty()) {
+                ViewBag.AddressError = "\nАдреса Гуртожитку повинна включати 5 і більше символів";
+            }
+            if (model?.Floors < 1 || model?.Floors == null) {
+                ViewBag.FloorsError = "\nКількість поверхів повинна бути більшою за 0";
+            }
+            return View(model);
+        }
+
+        #endregion
+        #region ROOMS
+        public async Task<IActionResult> Rooms(int dormId) {
+            var rooms = await _roomService.GettAllInDorm(dormId);
+            var roomViewModel = new RoomsViewModel { Rooms = rooms, dormitoryId = dormId, Room = new RoomDto() };
+            return View(roomViewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateRoom(RoomsViewModel model) {
+            var room = model.Room;
+            var existingRoom = await _roomService.GetByNumberOfRoom(room.NumberOfRoom);
+            var validator = new CreateRoomValidation();
+            var res = await validator.ValidateAsync(model.Room);
+            if (res.IsValid) {
+                if(existingRoom.ResidentsGender != null) {
+                    existingRoom.ResidentsGender = room.ResidentsGender;
+                    existingRoom.NumberOfBeds = room.NumberOfBeds;
+                    existingRoom.NumberOfRoom = room.NumberOfRoom;
+                    await _roomService.Update(existingRoom);
+                    return RedirectToAction(nameof(Rooms), new { dormId = room.DormId });
+                }
+                await _roomService.Create(room);
+            }
+            
+            return RedirectToAction(nameof(Rooms), new {dormId = room.DormId});
+        }
+
+        public async Task<IActionResult> DeleteRoom(int Id) {
+            var room = await _roomService.Get(Id);
+            await _roomService.Delete(Id);
+            return RedirectToAction(nameof(Rooms), new {dormId = room.DormId});
+        }
         #endregion
     }
 }
