@@ -108,7 +108,7 @@ namespace DormitoryManager.Controllers
 
         public async Task<IActionResult> Users() {
             var model = new UserDetailsViewModel();
-            model.users = await _userService.GetAllAsync().Result.Payload;
+            //model.users = await _userService.GetAllAsync().Result.Payload;
             model.dormitory = await _dormService.GettAll();
             model.faculties = await _facultyService.GettAll();
             return View(model);
