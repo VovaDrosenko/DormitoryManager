@@ -8,12 +8,13 @@ namespace DormitoryManager.AutoMapper
         public AutoMapperStudentProfile()
         {
             CreateMap<StudentsDto, Models.Entities.Student>().ReverseMap();
+            CreateMap<UpdateStudentsDto, Models.Entities.Student>().ReverseMap();
             CreateMap<CreateStudentDto, Models.Entities.Student>()
                 .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => ConvertToByteArray(src.Photo)))
                 .ForMember(dest => dest.ApplicationScan, opt => opt.MapFrom(src => ConvertToByteArray(src.ApplicationScan)));
-            CreateMap<Models.Entities.Student, StudentsDto>()
+            /*CreateMap<Models.Entities.Student, StudentsDto>()
                 .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => ConvertToIFormFile(src.Photo, "photo.jpg", "image/jpeg")))
-                .ForMember(dest => dest.ApplicationScan, opt => opt.MapFrom(src => ConvertToIFormFile(src.ApplicationScan, "photo.jpg", "image/jpeg")));
+                .ForMember(dest => dest.ApplicationScan, opt => opt.MapFrom(src => ConvertToIFormFile(src.ApplicationScan, "photo.jpg", "image/jpeg")));*/
 
         }
 

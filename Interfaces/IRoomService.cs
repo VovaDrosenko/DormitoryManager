@@ -14,5 +14,6 @@ namespace DormitoryManager.Interfaces
         Task Update(RoomDto model);
         Task Delete(int id);
         Task<RoomDto> GetByNumberOfRoom(int numberOfRoom);
+        Task<IEnumerable<RoomDto>> GetByDormitoryIdAndGender(int dormitoryId, string gender);
     }
 }

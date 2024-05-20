@@ -35,7 +35,7 @@ namespace DormitoryManager.Services
             }
         }
 
-        public async Task<Models.Entities.Dormitory> Get(int id)
+        public async Task<Dormitory> Get(int id)
         {
             if (id < 0) return null;
 

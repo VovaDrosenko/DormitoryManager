@@ -19,60 +19,123 @@
                                 <img src="@Model.ApplicationScanString" alt="Student Document" style="max-width: 200px; max-height: 200px;">
                             }
 
-                            <p><strong>ПІБ:</strong> @Model.StudentName @Model.StudentMiddlename @Model.StudentLastname</p>
-                            <p><strong>Дата народження:</strong> @Model.DateOfBirth.ToShortDateString()</p>
-                            <p><strong>Стать:</strong> @Model.Gender</p>
-                            <p><strong>Номер телефону:</strong> @Model.StudentPhone</p>
-                            <p><strong>Електрона пошта:</strong> @Model.StudentEmail</p>
-                            <p><strong>Факультет:</strong> @Model.FacultyName</p>
-                            <div class="mb-3">
-                                <label asp-for="DormitoryId"><strong>Номер гуртожитку:</strong></label>
-                                <select asp-for="DormitoryId" id="DormitoryId" class="form-control">
-                                    @foreach (var dorm in ViewBag.Dormitories)
-                                    {
-                                        <option value="@dorm.Id">@dorm.DormNumber</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label asp-for="RoomId"><strong>Номер кімнати:</strong></label>
-                                <select asp-for="RoomId" id="RoomId" class="form-control">
-                                    <option value="">Select a dormitory first</option>
-                                </select>
-                            </div>
+                            
+                            <form asp-action="EditStudent">
+                                <p ><strong>ПІБ:</strong> @Model.StudentName @Model.StudentMiddlename @Model.StudentLastname</p>
+                                <p><strong>Дата народження:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+                                <p><strong>Стать:</strong> @Model.Gender</p>
+                                <p><strong>Номер телефону:</strong> @Model.StudentPhone</p>
+                                <p><strong>Електрона пошта:</strong> @Model.StudentEmail</p>
+                                <p><strong>Факультет:</strong> @Model.FacultyName</p>
+                                <input type="hidden" asp-for="Id" value="@Model.Id" />
+                                <input type="hidden" asp-for="StudentName" value="@Model.StudentName" />
+                                <input type="hidden" asp-for="StudentMiddlename" value="@Model.StudentMiddlename" />
+                                <input type="hidden" asp-for="StudentLastname" value="@Model.StudentLastname" />
+                                <input type="hidden" asp-for="DateOfBirth" value="@Model.DateOfBirth.ToShortDateString()" />
+                                <input type="hidden" asp-for="Gender" value="@Model.Gender" />
+                                <input type="hidden" asp-for="StudentPhone" value="@Model.StudentPhone" />
+                                <input type="hidden" asp-for="StudentEmail" value="@Model.StudentEmail" />
+                                <input type="hidden" asp-for="FacultyName" value="@Model.FacultyName" />
+                                <input type="hidden" asp-for="FacultyId" value="@Model.FacultyId" />
+                                <input type="hidden" asp-for="PhotoString" value="@Model.PhotoString" />
+                                <input type="hidden" asp-for="ApplicationScanString" value="@Model.ApplicationScanString" />
+                               <div class="mb-3">
+                                    <label asp-for="DormitoryId"><strong>Номер гуртожитку:</strong></label>
+                                    <select asp-for="DormitoryId" id="DormitoryId" class="form-control">
+                                        @foreach (var dorm in ViewBag.Dormitories)
+                                        {
+                                            <option value="@dorm.Id">@dorm.DormNumber</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="RoomId"><strong>Номер кімнати:</strong></label>
+                                    <select asp-for="RoomId" id="RoomId" class="form-control">
+                                        <option value="">Select a dormitory first</option>
+                                    </select>
+                                </div>
 
-                            @section Scripts {
-                                <script>
-                                    $(document).ready(function() {
-                                        $('#DormitoryId').change(function() {
-                                            var dormitoryId = $(this).val();
-                                            $.ajax({
-                                                url: '@Url.Action("GetRoomsByDormitory")',
-                                                type: 'GET',
-                                                data: { dormitoryId: dormitoryId },
-                                                success: function(data) {
-                                                    var roomsDropdown = $('#RoomId');
-                                                    roomsDropdown.empty();
-                                                    if (data.length > 0) {
-                                                        $.each(data, function(index, room) {
+                                @section Scripts {
+                                    <script>
+                                        $(document).ready(function () {
+                                            var studentGender = '@Html.Raw(ViewBag.StudentGender)';
+                                            var dormitoryId = '@Model.DormitoryId';
+                                            var roomId = '@Model.RoomId';
+
+                                            // Add default option to Dormitory dropdown
+                                            $('#DormitoryId').prepend('<option value="" selected>Select dormitory</option>');
+
+                                            // Function to load rooms based on dormitory and gender
+                                            function loadRooms(dormitoryId, selectedRoomId = null) {
+                                                $.ajax({
+                                                    url: '@Url.Action("GetRoomsByDormitoryAndGender")',
+                                                    type: 'GET',
+                                                    data: { dormitoryId: dormitoryId, gender: studentGender },
+                                                    success: function (data) {
+                                                        var roomsDropdown = $('#RoomId');
+                                                        roomsDropdown.empty();
+                                                        if (data.length > 0) {
+                                                            $.each(data, function (index, room) {
+                                                                var option = $('<option>', {
+                                                                    value: room.id,
+                                                                    text: room.numberOfRoom
+                                                                });
+                                                                if (room.id == selectedRoomId) {
+                                                                    option.attr('selected', 'selected');
+                                                                }
+                                                                roomsDropdown.append(option);
+                                                            });
+                                                        } else {
                                                             roomsDropdown.append($('<option>', {
-                                                                value: room.id,
-                                                                text: room.numberOfRoom
+                                                                value: '',
+                                                                text: 'No rooms available for the selected gender'
                                                             }));
-                                                        });
-                                                    } else {
-                                                        roomsDropdown.append($('<option>', {
-                                                            value: '',
-                                                            text: 'No rooms available'
-                                                        }));
+                                                        }
                                                     }
+                                                });
+                                            }
+
+                                            // Check if dormitoryId and roomId are set and load data accordingly
+                                            if (dormitoryId) {
+                                                $('#DormitoryId').val(dormitoryId);
+                                                loadRooms(dormitoryId, roomId);
+                                            }
+
+                                            // Event handler for Dormitory dropdown change
+                                            $('#DormitoryId').change(function () {
+                                                var selectedDormitoryId = $(this).val();
+                                                if (selectedDormitoryId) {
+                                                    loadRooms(selectedDormitoryId);
+                                                } else {
+                                                    $('#RoomId').empty();
+                                                    $('#RoomId').append($('<option>', {
+                                                        value: '',
+                                                        text: 'Select a dormitory first'
+                                                    }));
                                                 }
                                             });
                                         });
-                                    });
-                                </script>
-                            }
+                                    </script>
+                                }
 
+                                <div class="mb-3">
+                                    <label asp-for="DateBegin"><strong>Дата початку:</strong></label>
+                                    <input asp-for="DateBegin" id="DateBegin" class="form-control" type="date" />
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="DateEnd"><strong>Дата кінця:</strong></label>
+                                    <input asp-for="DateEnd" id="DateEnd" class="form-control" type="date" />
+                                </div>
+
+                                <input type="hidden" asp-for="Settlement" value=true />
+                                <div class="form-group">
+                                    <input style="margin: 10px" type="submit" value="Поселити" class="btn btn-primary" />
+                                </div>
+                            </form>
+
+                            <div>
+                                <a asp-action="Requests">Назад до списку</a>
+                            </div>
                         </div>
                     </div>
                 </div>

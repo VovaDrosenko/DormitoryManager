@@ -23,6 +23,7 @@ namespace DormitoryManager
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IDormitoryService, DormitoryService>();
             services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IStudentRoomService, StudentRoomService>();
         }
 
         public static void AddInfrastructureService(this IServiceCollection services)
@@ -55,6 +56,7 @@ namespace DormitoryManager
             services.AddAutoMapper(typeof(AutoMapperFacultyProfile));
             services.AddAutoMapper(typeof(AutoMapperDormitoryProfile));
             services.AddAutoMapper(typeof(AutoMapperRoomProfile));
+            services.AddAutoMapper(typeof(AutoMapperStudentRoomProfile));
         }
     }
 }
