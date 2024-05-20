@@ -104,6 +104,15 @@ namespace DormitoryManager.Controllers
         }
 
 
+        #region
+
+        public async Task<IActionResult> Users() {
+            var model = new UserDetailsViewModel();
+            model.users = await _userService.GetAllAsync().Result.Payload;
+            model.dormitory = await _dormService.GettAll();
+            model.faculties = await _facultyService.GettAll();
+            return View(model);
+        }
 
         public async Task<IActionResult> Create() {
             var model = new UserViewModel();
@@ -138,6 +147,7 @@ namespace DormitoryManager.Controllers
             model.faculties = await _facultyService.GettAll();
             return View(model);
         }
+        #endregion
 
         public async Task<IActionResult> Delete(int Id) {
             await _studentService.Delete(Id);

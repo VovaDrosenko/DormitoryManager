@@ -30,6 +30,12 @@ namespace DormitoryManager.Services
             _mapper = mapper;
         }
 
+        //public async Task<UsersDto> GetAll() {
+        //    List<AppUser> users = await _userManager.Users.ToListAsync();
+        //    List<UsersDto> mappedUsers = users.Select(u => _mapper.Map<AppUser, UsersDto>(u)).ToList();
+        //    return mappedUsers;
+        //}
+
         public async Task<ServiceResponse> LoginUserAsync(LoginUserDto model)
         {
             var user = await _userManager.FindByEmailAsync(model.Email);

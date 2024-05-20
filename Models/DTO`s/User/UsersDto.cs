@@ -15,5 +15,7 @@ namespace DormitoryManager.Models.DTO_s.User
         public string Email { get; set; } = string.Empty;
         public string LockedEnd { get; set; } = string.Empty;
         public string Role { get; set; } = string.Empty;
+        public string FacultyId { get; set; } = string.Empty;
+        public string DormId { get; set; } = string.Empty;
     }
 }
