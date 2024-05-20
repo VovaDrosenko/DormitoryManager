@@ -106,16 +106,27 @@ namespace DormitoryManager.Controllers
 
 
         public async Task<IActionResult> Create() {
-            return View();
+            var model = new UserViewModel();
+            model.dormitory = await _dormService.GettAll();
+            model.faculties = await _facultyService.GettAll();
+            return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(CreateUserDto model) {
+        public async Task<IActionResult> Create(UserViewModel model) {
             var validator = new CreateUserValidation();
-            var validationResult = await validator.ValidateAsync(model);
+            var validationResult = await validator.ValidateAsync(model.user);
             if (validationResult.IsValid) {
-                var result = await _userService.CreateAsync(model);
+                if (model.user.Role == "Dekanat")
+                    model.user.DormId = null;
+                else if (model.user.Role == "Komendant")
+                    model.user.FacultyId = null;
+                else {
+                    model.user.FacultyId = null;
+                    model.user.DormId = null;
+                }
+                var result = await _userService.CreateAsync(model.user);
                 if (result.Success) {
                     return RedirectToAction(nameof(Index));
                 }
@@ -123,6 +134,8 @@ namespace DormitoryManager.Controllers
                 return View(model);
             }
             ViewBag.AuthError = validationResult.Errors[0];
+            model.dormitory = await _dormService.GettAll();
+            model.faculties = await _facultyService.GettAll();
             return View(model);
         }
 
