@@ -15,4 +15,5 @@ public class RoomDto
     public string? NumberOfBeds { get; set; }
 
     public string? ResidentsGender { get; set; }
+
 }

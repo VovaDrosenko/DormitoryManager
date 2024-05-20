@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sasha\\Desktop\\DormitoryManager\\DormitoryManager.csproj": {}
+    "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\DormitoryManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sasha\\Desktop\\DormitoryManager\\DormitoryManager.csproj": {
+    "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\DormitoryManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
+        "projectUniqueName": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\DormitoryManager.csproj",
         "projectName": "DormitoryManager",
-        "projectPath": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
-        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\obj\\",
+        "projectPath": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\DormitoryManager.csproj",
+        "packagesPath": "C:\\Users\\Volodymyr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Volodymyr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

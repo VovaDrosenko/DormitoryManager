@@ -37,12 +37,42 @@
                             <div class="mb-3">
                                 <label asp-for="RoomId"><strong>Номер кімнати:</strong></label>
                                 <select asp-for="RoomId" id="RoomId" class="form-control">
-                                    @foreach (var room in ViewBag.Rooms)
-                                    {
-                                        <option value="@room.Id">@room.NumberOfRoom</option>
-                                    }
+                                    <option value="">Select a dormitory first</option>
                                 </select>
                             </div>
+
+                            @section Scripts {
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#DormitoryId').change(function() {
+                                            var dormitoryId = $(this).val();
+                                            $.ajax({
+                                                url: '@Url.Action("GetRoomsByDormitory")',
+                                                type: 'GET',
+                                                data: { dormitoryId: dormitoryId },
+                                                success: function(data) {
+                                                    var roomsDropdown = $('#RoomId');
+                                                    roomsDropdown.empty();
+                                                    if (data.length > 0) {
+                                                        $.each(data, function(index, room) {
+                                                            roomsDropdown.append($('<option>', {
+                                                                value: room.id,
+                                                                text: room.numberOfRoom
+                                                            }));
+                                                        });
+                                                    } else {
+                                                        roomsDropdown.append($('<option>', {
+                                                            value: '',
+                                                            text: 'No rooms available'
+                                                        }));
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+                            }
+
                         </div>
                     </div>
                 </div>

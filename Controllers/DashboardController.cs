@@ -155,19 +155,21 @@ namespace DormitoryManager.Controllers
         }*/
 
         [HttpGet]
-        public async Task<IActionResult> EditStudent(int id) {
+        public async Task<IActionResult> EditStudent(int id)
+        {
             var student = await _studentService.Get(id);
             var faculties = await _facultyService.GettAll();
             var studentFaculty = faculties.FirstOrDefault(f => f.Id == student.FacultyId);
 
             ViewBag.Dormitories = await _dormService.GettAll();
-            ViewBag.Rooms = await _roomService.GettAll();
-            if (studentFaculty != null) {
+            if (studentFaculty != null)
+            {
                 student.FacultyName = studentFaculty.FacultyName;
             }
-
+            
             await GetRoles();
-            if (student != null) {
+            if (student != null)
+            {
                 var base64Photo = ConvertToBase64(student.Photo);
                 var base64Doc = ConvertToBase64(student.ApplicationScan);
                 student.PhotoString = base64Photo;
@@ -176,6 +178,15 @@ namespace DormitoryManager.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetRoomsByDormitory(int dormitoryId)
+        {
+            var rooms = await _roomService.GettAllInDorm(dormitoryId);
+            ViewBag.Rooms = rooms;
+            return Json(rooms);
+        }
+
         private string ConvertToBase64(IFormFile file) {
             if (file == null) return null;
 

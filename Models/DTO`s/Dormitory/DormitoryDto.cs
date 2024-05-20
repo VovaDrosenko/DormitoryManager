@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DormitoryManager.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,11 +14,11 @@ public partial class DormitoryDto
 
     public string? Address { get; set; }
 
-    public int? Floors { get; set; }/*
+    public int? Floors { get; set; }
 
     public virtual ICollection<DormitoryComendant> DormitoryComendants { get; set; } = new List<DormitoryComendant>();
 
-    public virtual ICollection<Room> Rooms { get; set; } = new List<Room>();
+    public virtual ICollection<Entities.Room> Rooms { get; set; } = new List<Entities.Room>();
 
-    public virtual ICollection<Student> Student { get; set; } = new List<Student>();*/
+    public virtual ICollection<Entities.Student> Student { get; set; } = new List<Entities.Student>();
 }
