@@ -1,11 +1,10 @@
-﻿using DormitoryManager.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace DormitoryManager.Models.Entities;
+namespace DormitoryManager.Models.DTO_s.StudentRoom;
 
-public partial class StudentRoom: IEntity
+public class StudentRoomDto
 {
     public int Id {  get; set; }
     public int RoomId { get; set; }
@@ -17,8 +16,4 @@ public partial class StudentRoom: IEntity
     public DateTime? DateBegin { get; set; }
 
     public DateTime? DateEnd { get; set; }
-
-    public virtual Room Room { get; set; } = null!;
-
-    public virtual Student Student { get; set; } = null!;
 }

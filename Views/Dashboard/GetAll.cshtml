@@ -21,15 +21,7 @@
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>All users</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Users</li>
-                    </ol>
-                </div>
+
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -41,36 +33,45 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">User list with minimal information</h3>
+                            <h3 class="card-title">Список поселених студентів</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>First name</th>
-                                        <th>Middle name</th>
-                                        <th>Last name</th>
+                                        <th>ПІБ</th>
+                                        <th>Спеціальність</th>
                                         @if (@User.IsInRole("Administrator"))
                                         {
-                                            <th>Edit</th>
-                                            <th>Delete</th>
+                                            <th>Дія</th>
                                         }
-                                        
+                                        @if (@User.IsInRole("Dekanat"))
+                                        {
+                                            <th>Дія</th>
+                                        }
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
                                         <tr>
-                                            <td>@item.StudentName</td>
-                                            <td>@item.StudentMiddlename</td>
-                                            <td>@item.StudentLastname</td>
+                                            <td>@item.StudentLastname @item.StudentName @item.StudentMiddlename</td>
+                                            <td>@item.FacultyName</td>
                                             @if (@User.IsInRole("Administrator") && item.StudentEmail != email)
                                             {
-                                                <td><a asp-controller="Dashboard"  asp-action="Edit" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Edit</a></td>
-                                                <td><a asp-controller="Dashboard" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Delete</a></td>
+                                                <td>
+                                                    <a asp-controller="Dashboard" asp-action="GetSettlStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a>
+                                                    <a asp-controller="Dashboard" asp-action="DeleteFromSettl" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a>
+                                                </td>
                                             }
+                                            @if (@User.IsInRole("Dekanat") && item.StudentEmail != email)
+                                            {
+                                                <td><a asp-controller="Dashboard" asp-action="GetSettlStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a></td>
+                                            }
+                                        </tr>
+                                        <tr>
                                         </tr>
                                     }
                                 </tbody>

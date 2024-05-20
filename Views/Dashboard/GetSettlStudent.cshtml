@@ -1,0 +1,43 @@
+﻿@using DormitoryManager.Models.DTO_s.Student;
+@model StudentsDto
+<section class="min-vh-100 mb-8">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-5 col-md-7 ">
+                <div class="card z-index-0 mt-4">
+                    <div class="text-center pt-4">
+                        <h5>Перегляд інформації про студента</h5>
+                    </div>
+                    <div class="center card-body">
+                        <div>
+                            @if (!string.IsNullOrEmpty(Model.PhotoString))
+                            {
+                                <img src="@Model.PhotoString" alt="Student Photo" style="max-width: 200px; max-height: 200px;">
+                            }
+                            @if (!string.IsNullOrEmpty(Model.ApplicationScanString))
+                            {
+                                <img src="@Model.ApplicationScanString" alt="Student Document" style="max-width: 200px; max-height: 200px;">
+                            }
+
+                            <p ><strong>ПІБ:</strong> @Model.StudentName @Model.StudentMiddlename @Model.StudentLastname</p>
+                            <p><strong>Дата народження:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+                            <p><strong>Стать:</strong> @Model.Gender</p>
+                            <p><strong>Номер телефону:</strong> @Model.StudentPhone</p>
+                            <p><strong>Електрона пошта:</strong> @Model.StudentEmail</p>
+                            <p><strong>Факультет:</strong> @Model.FacultyName</p>
+                            <p><strong>Гуртожиток:</strong> @Model.DormNum</p>
+                            <p><strong>Кімната:</strong> @Model.RoomNum</p>
+                            <p><strong>Дата поселення:</strong> @Model.DateBegin</p>
+                            <p><strong>Дата виседення:</strong> @Model.DateEnd</p>
+                                
+
+                            <div>
+                                <a asp-action="GetAll">Назад до списку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

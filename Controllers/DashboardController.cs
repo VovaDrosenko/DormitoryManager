@@ -20,6 +20,8 @@ using DormitoryManager.Validation.Dormitory;
 using DormitoryManager.ViewModel;
 using DormitoryManager.Models.DTO_s.Room;
 using DormitoryManager.Validation.Room;
+using DormitoryManager.Validation.Student;
+using DormitoryManager.Models.DTO_s.StudentRoom;
 
 namespace DormitoryManager.Controllers
 {
@@ -30,17 +32,20 @@ namespace DormitoryManager.Controllers
         private readonly IStudentService _studentService;
         private readonly IFacultyService _facultyService;
         private readonly IDormitoryService _dormService;
+        private readonly IStudentRoomService _studentRoomService;
         private readonly IMapper _mapper;
         private readonly IRoomService _roomService;
 
 
 
-        public DashboardController(UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService) {
+        public DashboardController(UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService, IStudentRoomService studentRoomService = null)
+        {
             _userService = userService;
             _studentService = studentService;
             _facultyService = facultyService;
             _dormService = dormitoryService;
             _roomService = roomService;
+            _studentRoomService = studentRoomService;
         }
 
         public IActionResult Index() {
@@ -76,8 +81,22 @@ namespace DormitoryManager.Controllers
         }
 
         public async Task<IActionResult> GetAll() {
-            var result = await _studentService.GettAllSettStud();
-            return View(result);
+            var std = await _studentService.GettAllSettStud();
+            var faculties = await _facultyService.GettAll();
+            var result = from s in std
+                         join f in faculties on s.FacultyId equals f.Id
+                         select new StudentsDto
+                         {
+                             Id = s.Id,
+                             StudentLastname = s.StudentLastname,
+                             StudentMiddlename = s.StudentMiddlename,
+                             StudentName = s.StudentName,
+                             StudentPhone = s.StudentPhone,
+                             FacultyId = s.FacultyId,
+                             Gender = s.Gender,
+                             FacultyName = f.FacultyName
+                         };
+            return View(result.ToList());
         }
         public async Task<IActionResult> Requests() {
             var students = await _studentService.GetAllRequest();
@@ -133,6 +152,14 @@ namespace DormitoryManager.Controllers
 
         }
 
+        public async Task<IActionResult> DeleteFromSettl(int Id)
+        {
+            await _studentService.Delete(Id);
+
+            return RedirectToAction(nameof(GetAll));
+
+        }
+
 
         public async Task<IActionResult> DeleteById(string id) {
             var result = await _userService.DeleteAsync(id);
@@ -154,6 +181,35 @@ namespace DormitoryManager.Controllers
             return View();
         }*/
 
+        
+            [HttpGet]
+        public async Task<IActionResult> GetSettlStudent(int id)
+        {
+            var student = await _studentService.Get(id);
+            var faculty = await _facultyService.Get(student.FacultyId);
+            var stdRoom = await _studentRoomService.Get(id);
+            var dorm = await _dormService.Get(stdRoom.DormId);
+            var room = await _roomService.Get(stdRoom.RoomId);
+            student.FacultyName = faculty.FacultyName;
+            student.DormNum = dorm.DormNumber;
+            student.RoomNum = room.NumberOfRoom;
+            student.DateBegin = stdRoom.DateBegin;
+            student.DateEnd = stdRoom.DateEnd;
+
+            
+
+            await GetRoles();
+            if (student != null)
+            {
+                var base64Photo = ConvertToBase64(student.Photo);
+                var base64Doc = ConvertToBase64(student.ApplicationScan);
+                student.PhotoString = base64Photo;
+                student.ApplicationScanString = base64Doc;
+                return View(student);
+            }
+            return View();
+        }
+
         [HttpGet]
         public async Task<IActionResult> EditStudent(int id)
         {
@@ -162,6 +218,8 @@ namespace DormitoryManager.Controllers
             var studentFaculty = faculties.FirstOrDefault(f => f.Id == student.FacultyId);
 
             ViewBag.Dormitories = await _dormService.GettAll();
+            ViewBag.StudentGender = student.Gender;
+
             if (studentFaculty != null)
             {
                 student.FacultyName = studentFaculty.FacultyName;
@@ -179,24 +237,58 @@ namespace DormitoryManager.Controllers
             return View();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetRoomsByDormitory(int dormitoryId)
+        [HttpPost]
+        public async Task<IActionResult> EditStudent(StudentsDto studentsDto)
         {
-            var rooms = await _roomService.GettAllInDorm(dormitoryId);
-            ViewBag.Rooms = rooms;
+            studentsDto.ApplicationScan = ConvertFromBase64String(studentsDto.ApplicationScanString);
+            studentsDto.Photo = ConvertFromBase64String(studentsDto.PhotoString);
+            var validator = new UpdateStudentsValidation();
+            var validationResult = await validator.ValidateAsync(studentsDto);
+            if (validationResult.IsValid)
+            {
+
+                await _studentService.Update(studentsDto);
+                await _studentRoomService.Create(new StudentRoomDto()
+                {
+                    DormId = studentsDto.DormitoryId,
+                    RoomId = studentsDto.RoomId,
+                    StudentId = studentsDto.Id,
+                    DateBegin = studentsDto.DateBegin,
+                    DateEnd = studentsDto.DateEnd
+                });
+                return RedirectToAction(nameof(Requests));
+            }
+
+            ViewBag.AuthError = validationResult.Errors[0];
+            return View(studentsDto);
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetRoomsByDormitoryAndGender(int dormitoryId, string gender)
+        {
+            var rooms = await _roomService.GetByDormitoryIdAndGender(dormitoryId, gender);
             return Json(rooms);
         }
 
-        private string ConvertToBase64(IFormFile file) {
+        private string ConvertToBase64(byte[] file) {
             if (file == null) return null;
 
             using (MemoryStream ms = new MemoryStream()) {
-                file.CopyTo(ms);
-                byte[] fileBytes = ms.ToArray();
-                string base64String = Convert.ToBase64String(fileBytes);
+                string base64String = Convert.ToBase64String(file);
                 return "data:image/png;base64," + base64String;
             }
         }
+
+        private byte[] ConvertFromBase64String(string base64String)
+        {
+            if (string.IsNullOrEmpty(base64String))
+                return null;
+
+            var data = base64String.Substring(base64String.IndexOf(",") + 1);
+            return Convert.FromBase64String(data);
+        }
+
         private async Task GetRoles() {
             var result = await _userService.LoadRoles();
             @ViewBag.RoleList = new SelectList(

@@ -2,6 +2,7 @@
 using DormitoryManager.Interfaces;
 using DormitoryManager.Models.DTO_s.Room;
 using DormitoryManager.Specifications;
+using Microsoft.EntityFrameworkCore;
 
 namespace DormitoryManager.Services
 {
@@ -78,14 +79,30 @@ namespace DormitoryManager.Services
             var roomsInDorm = result.Where(r => r.DormId == dormId).ToList(); // Відбираємо кімнати, які належать до переданого гуртожитку
             return _mapper.Map<List<RoomDto>>(roomsInDorm); // Повертаємо список кімнат, змінений на RoomDto
         }
-        async Task<RoomDto> IRoomService.GetByNumberOfRoom(int numberOfRoom){
+
+
+        async Task<RoomDto> IRoomService.GetByNumberOfRoom(int numberOfRoom) {
             RoomDto room = new RoomDto();
             var rooms = await _repository.GetAll();
-            foreach(var r in rooms) {
+            foreach (var r in rooms) {
                 if (r.NumberOfRoom == numberOfRoom)
                     room = _mapper.Map<RoomDto>(r);
             }
             return room;
+        }
+
+        public async Task<IEnumerable<RoomDto>> GetByDormitoryIdAndGender(int dormitoryId, string gender)
+        {
+            var rooms = await _repository.GetAll(); 
+
+            return rooms
+                .Where(r => r.DormId == dormitoryId && r.ResidentsGender == gender)
+                .Select(r => new RoomDto
+                {
+                    Id = r.Id,
+                    DormId = r.DormId,
+                    NumberOfRoom = r.NumberOfRoom,
+                }).ToList();
         }
 
     }
