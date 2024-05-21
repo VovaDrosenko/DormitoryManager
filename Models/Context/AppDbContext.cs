@@ -14,9 +14,11 @@ namespace DormitoryManager.Models.Context
         public DbSet<Faculty> Faculties { get; set; }
         public DbSet<FacultyWorker> FacultyWorkers { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Status> Statuses { get; set; }
         public DbSet<Student> Students { get; set; }
-        public DbSet<StudentRoom> StudentRooms { get; set; }
+        //public DbSet<StudentRoom> StudentRooms { get; set; }
         public DbSet<Worker> Workers { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

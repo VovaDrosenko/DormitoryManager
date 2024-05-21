@@ -16,8 +16,8 @@ public partial class Room: IEntity
     public string? NumberOfBeds { get; set; }
 
     public string? ResidentsGender { get; set; }
+    public int? FreeBeds { get; set; }
+    public int Floor { get; set; }
 
     public virtual Dormitory Dorm { get; set; } = null!;
-
-    public virtual ICollection<StudentRoom> StudentRooms { get; set; } = new List<StudentRoom>();
 }

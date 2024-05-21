@@ -1,0 +1,75 @@
+﻿@model DormitoryManager.ViewModel.UserDetailsViewModel
+
+<p>
+    <a asp-action="Create">Додати користувача</a>
+</p>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Користувачі</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Прізвище</th>
+                                        <th>Ім'я'</th>
+                                        <th>Електронна пошта</th>
+                                        <th>Місце роботи</th>
+                                        <th>Дія</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.users) {
+                                        <tr>
+                                            <td>
+                                                @item.FirstName
+                                            </td>
+                                            <td>
+                                                @item.LastName
+                                            </td>
+                                            <td>
+                                                @item.Email
+                                            </td>
+                                            <td>
+                                                @if(item.DormId != null) {
+                                                    foreach(var dorm in Model.dormitory) {
+                                                        if(dorm.Id.ToString() == item.DormId) {
+                                                            <label>Гуртожиток № @dorm.DormNumber</label>
+                                                        }
+
+                                                    }
+                                                }
+                                                else if(item.FacultyId != null) {
+                                                    foreach (var faculty in Model.faculties) {
+                                                        if(faculty.Id.ToString() == item.FacultyId) {
+                                                            <label>@faculty.FacultyName</label>
+                                                        }
+                                                    }
+                                                }
+                                                else {
+                                                    <label>Адміністратор</label>
+                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-controller="Dashboard" asp-action="EditUser" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Редагувати</a>
+                                                <a asp-controller="Dashboard" asp-action="DeleteUser" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

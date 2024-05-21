@@ -20,11 +20,16 @@ public partial class Student : IEntity
     public string? StudentEmail { get; set; } = null!;
     public byte[] Photo { get;set; } = null!;
     public byte[] ApplicationScan { get; set; } = null!;
+    public int RoomId { get; set; }
 
     public bool Settlement { get; set; }
 
     public int? Course { get; set; }
+    public DateTime? DateBegin { get; set; }
 
+    public DateTime? DateEnd { get; set; }
+    
+    public int StatusId { get; set; }
     public DateTime? DateOfBirth { get; set; }
 
     public string? Gender { get; set; } = null!;
@@ -32,6 +37,7 @@ public partial class Student : IEntity
     public int FacultyId { get; set; }
 
     public virtual Faculty? Faculty { get; set; }
+    public virtual Status? Status { get; set; }
+    public virtual Room? Room { get; set; }
 
-    public virtual ICollection<StudentRoom> StudentRooms { get; set; } = new List<StudentRoom>();
 }

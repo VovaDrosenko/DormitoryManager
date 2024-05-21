@@ -22,6 +22,7 @@ using DormitoryManager.Models.DTO_s.Room;
 using DormitoryManager.Validation.Room;
 using DormitoryManager.Validation.Student;
 using DormitoryManager.Models.DTO_s.StudentRoom;
+using Microsoft.EntityFrameworkCore;
 
 namespace DormitoryManager.Controllers
 {
@@ -35,10 +36,11 @@ namespace DormitoryManager.Controllers
         private readonly IStudentRoomService _studentRoomService;
         private readonly IMapper _mapper;
         private readonly IRoomService _roomService;
+        private readonly UserManager<AppUser> _userManager;
 
 
 
-        public DashboardController(UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService, IStudentRoomService studentRoomService = null)
+        public DashboardController(UserManager<AppUser> userManager, UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService, IStudentRoomService studentRoomService = null)
         {
             _userService = userService;
             _studentService = studentService;
@@ -46,6 +48,7 @@ namespace DormitoryManager.Controllers
             _dormService = dormitoryService;
             _roomService = roomService;
             _studentRoomService = studentRoomService;
+            _userManager = userManager;
         }
 
         public IActionResult Index() {
@@ -127,10 +130,14 @@ namespace DormitoryManager.Controllers
 
         public async Task<IActionResult> Users() {
             var model = new UserDetailsViewModel();
-            //model.users = await _userService.GetAllAsync().Result.Payload;
+            model.users = await _userManager.Users.ToListAsync();
             model.dormitory = await _dormService.GettAll();
             model.faculties = await _facultyService.GettAll();
             return View(model);
+        }
+        public async Task<IActionResult> DeleteUser(AppUser model) {
+            await _userService.DeleteAsync(model.Id);
+            return RedirectToAction(nameof(Users));
         }
 
         public async Task<IActionResult> Create() {
@@ -166,6 +173,16 @@ namespace DormitoryManager.Controllers
             model.faculties = await _facultyService.GettAll();
             return View(model);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> EditUser(string id) {
+            var result = await _userService.GetByIdAsync(id);
+            await GetRoles();
+            if (result.Success) {
+                return View(result.Payload);
+            }
+            return View();
+        }
         #endregion
 
         public async Task<IActionResult> Delete(int Id) {
@@ -192,17 +209,7 @@ namespace DormitoryManager.Controllers
             return View(nameof(Index));
         }
 
-        /*[HttpGet]
-        public async Task<IActionResult> EditUser(string id)
-        {
-            var result = await _userService.GetByIdAsync(id);
-            await GetRoles();
-            if (result.Success)
-            {
-                return View(result.Payload);
-            }
-            return View();
-        }*/
+        
 
         
             [HttpGet]
