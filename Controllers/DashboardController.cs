@@ -514,6 +514,7 @@ namespace DormitoryManager.Controllers
                     existingRoom.ResidentsGender = room.ResidentsGender;
                     existingRoom.NumberOfBeds = room.NumberOfBeds;
                     existingRoom.NumberOfRoom = room.NumberOfRoom;
+                    existingRoom.Floor = room.Floor;
                     await _roomService.Update(existingRoom);
                     return RedirectToAction(nameof(Rooms), new { dormId = room.DormId });
                 }

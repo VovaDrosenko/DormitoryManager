@@ -11,6 +11,8 @@ public class RoomDto
     public int DormId { get; set; }
 
     public int NumberOfRoom { get; set; }
+    public int? FreeBeds { get; set; }
+    public int Floor { get; set; }
 
     public string? NumberOfBeds { get; set; }
 

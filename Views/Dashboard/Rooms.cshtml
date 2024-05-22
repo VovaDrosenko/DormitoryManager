@@ -23,6 +23,11 @@
                                     <label>Кількість ліжкомісць</label>
                                     <input asp-for="Room.NumberOfBeds" min="2" class="form-control" />
                                 </div>
+                                    <div class="form-group" style="margin: 10px;">
+                                        <label>Поверх</label>
+                                        <input asp-for="Room.Floor" min="1" class="form-control" />
+                                    </div>
+
                                 <div class="form-group" style="margin: 10px;">
                                     <label>Стать проживаючих</label>
                                         <select asp-for="Room.ResidentsGender" class="form-control select2" style="width: 100%;">
@@ -67,6 +72,7 @@
                                     <tr>
                                         <th>Номер Кімнати</th>
                                         <th>Кількість ліжкомісць</th>
+                                        <th>Поверх</th>
                                         <th>Стать проживаючих</th>
                                         <th>Дія</th>
                                        
@@ -82,8 +88,11 @@
                                                 @item.NumberOfBeds
                                             </td>
                                             <td>
-                                                @item.ResidentsGender
+                                            @item.Floor
                                             </td>
+                                            <td>
+                                                @item.ResidentsGender
+                                            </td>                                            
                                             <td>
                                                 <a asp-controller="Dashboard" asp-action="EditDormitory" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Редагувати</a>
                                                 <a asp-controller="Dashboard" asp-action="DeleteRoom" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a>
