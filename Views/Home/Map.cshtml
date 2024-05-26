@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мапа гуртожитків</title>
+    <!-- Підключення стилів Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Підключення стилів для шрифтів та основного оформлення -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+
+        #mapid {
+            width: 100%;
+            height:600px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Мапа Гуртожитків НУБІП України</h1>
+    </div>
+    <div id="mapid"></div>
+    <script>
+        var map = L.map('mapid').setView([50.3805, 30.4806], 15); // Координати центру мапи (НУБІП)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Створюємо маркери для гуртожитків з координатами
+        var hostels = [
+            { name: 'Гуртожиток №1', lat: 50.38721040354983, lon:  30.511462910556332, address: 'вул. Горіхуватський шлях, 3' },
+            { name: 'Гуртожиток №2', lat: 50.38794260965506, lon: 30.516950609648095, address: 'вул. Еллана-Блакитного, 10' },
+            { name: 'Гуртожиток №3', lat: 50.38843082611679, lon: 30.518403142072195, address: 'вул. Еллана-Блакитного, 4' },
+            { name: 'Гуртожиток №4', lat: 50.390687938569236, lon: 30.49854067173786, address: 'вул. Оріхуватська, 4' },
+            { name: 'Гуртожиток №5', lat: 50.386075196529625, lon: 30.473675713694295, address: 'вул. Юлії Здановської, 63' },
+            { name: 'Гуртожиток №6', lat: 50.38634966583245, lon: 30.47495137686272, address: 'вул. Юлії Здановської, 65' },
+            { name: 'Гуртожиток №7', lat: 50.386823689730335, lon: 30.475805897063427, address: 'вул. Юлії Здановської, 67' },
+            { name: 'Гуртожиток №8', lat: 50.388210976200234, lon: 30.51771825862716, address: 'вул. Еллана-Блакитного, 8' },
+            { name: 'Гуртожиток №9', lat: 50.38755243544046, lon: 30.511967165833436, address: 'вул. Горіхуватський шлях, 1' },
+            { name: 'Гуртожиток №10', lat: 50.385942120488984, lon: 30.511659070436362, address: 'вул. Горіхуватський шлях, 7А' },
+            { name: 'Гуртожиток №11', lat: 50.3861295665603, lon: 30.51046512883783, address: 'вул. Горіхуватський шлях, 7Б' },
+        { name: 'Гуртожиток №12', lat: 50.387173566344565, lon: 30.51308439903271, address: 'вул. Горіхуватський шлях, 1А' },
+        ];
+
+        hostels.forEach(function (hostel) {
+            var latlng = [hostel.lat, hostel.lon];
+            L.marker(latlng).addTo(map).bindPopup('<b>' + hostel.name + '</b><br>' + hostel.address);
+        });
+    </script>
+</body>
+</html>
+ 

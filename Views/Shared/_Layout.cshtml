@@ -47,6 +47,10 @@
                             <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Documents") ? "active" : "")"
                                asp-area="" asp-controller="Home" asp-action="Documents">Список документів</a>
                         </li>
+                        <li class="nav-item">
+                            <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Map") ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Map">Мапа гуртожитків</a>
+                        </li>
                     </ul>
                 </div>
             </div>

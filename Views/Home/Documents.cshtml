@@ -1,27 +1,117 @@
-﻿@{
-    ViewData["Title"] = "Список документів";
-}
-
-<h1>Dormitories</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>Dorm Id</th>
-            <th>Dorm Number</th>
-            <th>Address</th>
-            <th>Floors</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var dormitory in Model)
-        {
-            <tr>
-                <td>@dormitory.DormId</td>
-                <td>@dormitory.DormNumber</td>
-                <td>@dormitory.Address</td>
-                <td>@dormitory.Floors</td>
-            </tr>
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інформація для студентів НУБІП</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
         }
-    </tbody>
-</table>
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #004d99;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #007acc;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+
+            ul li {
+                margin-bottom: 10px;
+            }
+
+        .info {
+            background: #e9f5ff;
+            padding: 15px;
+            border-left: 5px solid #007acc;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+            .info strong {
+                font-weight: 700;
+            }
+
+        .contact-info {
+            background: #fef9e7;
+            padding: 15px;
+            border-left: 5px solid #ffcc00;
+            border-radius: 4px;
+        }
+
+            .contact-info p {
+                margin: 5px 0;
+            }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Інформація для студентів НУБІП</h1>
+        <h2>Студенту для поселення в гуртожиток потрібно мати:</h2>
+        <ul>
+            <li>Копію ID-карти роблять з двох сторін;</li>
+            <li>Фотокартки розміром 3х4 (3 шт.);</li>
+            <li>Довідку про проходження флюорографії та довідку про стан санітарно-епідеміологічного оточення дитини. Довідка надається сімейним лікарем, в якій вказується епідеміологічний стан дитини (наявність/відсутність педикульозу, шкірних захворювань, що протягом 21 дня не було контактів з людьми, які хворіють інфекційними хворобами та не перебуває на самоізоляції тощо);</li>
+            <li>Квитанцію про оплату за проживання в гуртожитку. Без наявності квитанції про оплату (оригінал або копія) за проживання у гуртожитку поселення студентів категорично забороняється;</li>
+            <li>Студенти чоловічої статті – приписне свідоцтво з відміткою про зняття з військового обліку за попереднім місцем проживання. Стати на військовий облік за новим місцем проживання необхідно протягом 7 днів з моменту зняття з військового обліку (детальніше за покликанням <a href="https://nubip.edu.ua/node/131691" target="_blank">тут</a>);</li>
+            <li>Студенти 1 курсу і магістри першого року навчання обов’язково мають зареєструватися за місцем фактичного проживання – в гуртожитку. Студенти зобов’язані мати при собі витяг з реєстру територіальної громади про місце проживання. Можна одночасно знятися із реєстрації та зареєструватися за новим місцем проживання у паспортному столі університету.</li>
+        </ul>
+        <div class="info">
+            <h2>Реквізити для оплати за проживання в гуртожитках студентського містечка НУБІП України на 2023-2024 н.р.</h2>
+            <p><strong>Одержувач:</strong> Національний університет біоресурсів і природокористування України</p>
+            <p><strong>Адреса:</strong> 03041, м. Київ, вул. Героїв Оборони, 15</p>
+            <p><strong>Телефон:</strong> 527-81-92</p>
+            <p><strong>IBAN:</strong> UA338201720313281002202016289</p>
+            <p><strong>Банк:</strong> ДКСУ м. Київ</p>
+            <p><strong>ЄДРПОУ:</strong> 00493706</p>
+            <p><strong>Призначення платежу:</strong> за проживання в гуртожитку № ___ (вказати гуртожиток, в якому буде проживати)</p>
+            <p><strong>П.І. по Б.:</strong> (вказувати повністю ініціали студента, який проживатиме в гуртожитку)</p>
+            <p><strong>ННІ/факультет:</strong> (на якому навчається студент)</p>
+        </div>
+        <div class="contact-info">
+            <p><strong>Суму за проживання уточнюйте в ННІ/факультетах</strong></p>
+        </div>
+    </div>
+</body>
+</html>

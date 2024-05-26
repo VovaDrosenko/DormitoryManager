@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DormitoryManager.Interfaces;
 using DormitoryManager.Models.DTO_s.Room;
+using DormitoryManager.Models.Entities;
 using DormitoryManager.Specifications;
 using Microsoft.EntityFrameworkCore;
 
@@ -81,14 +82,25 @@ namespace DormitoryManager.Services
         }
 
 
-        async Task<RoomDto> IRoomService.GetByNumberOfRoom(int numberOfRoom) {
+        async Task<RoomDto> IRoomService.GetByNumberOfRoom(int numberOfRoom, int dormId) {
             RoomDto room = new RoomDto();
             var rooms = await _repository.GetAll();
             foreach (var r in rooms) {
-                if (r.NumberOfRoom == numberOfRoom)
+                if (r.NumberOfRoom == numberOfRoom && dormId == r.DormId)
                     room = _mapper.Map<RoomDto>(r);
             }
             return room;
+        }
+        public async Task<IEnumerable<RoomDto>> GetAllByDormId(int dormId) {
+            var rooms = await _repository.GetAll();
+            return rooms
+                .Where(r => r.DormId == dormId)
+                .Select(r => new RoomDto {
+                    Id = r.Id,
+                    DormId = r.DormId,
+                    NumberOfRoom = r.NumberOfRoom,
+                    Floor = r.Floor // Додавання значення поля Floor
+                }).ToList();
         }
 
         public async Task<IEnumerable<RoomDto>> GetByDormitoryIdAndGender(int dormitoryId, string gender)
@@ -105,5 +117,21 @@ namespace DormitoryManager.Services
                 }).ToList();
         }
 
+        public async Task<List<RoomDto>> GettAllInDormAndFloor(int dormId, int floor) {
+            var rooms = await _repository.GetAll();
+
+            var filteredRooms = rooms.Where(r => r.DormId == dormId && r.Floor == floor)
+                                     .Select(r => new RoomDto {
+                                         Id = r.Id,
+                                         DormId = r.DormId,
+                                         NumberOfRoom = r.NumberOfRoom,
+                                         NumberOfBeds = r.NumberOfBeds,
+                                         ResidentsGender = r.ResidentsGender,
+                                         FreeBeds = r.FreeBeds,
+                                         Floor = r.Floor
+                                     }).ToList();
+
+            return filteredRooms;
+        }
     }
 }

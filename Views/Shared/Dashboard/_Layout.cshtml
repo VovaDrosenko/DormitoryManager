@@ -20,6 +20,16 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                     <a class="navbar-brand" asp-controller="Dashboard" asp-action="Index">DormitoryManager</a>
+                @if(user.DormId != null) {
+                    <div>@user.LastName @user.FirstName <div>Роль: Комендант</div></div>
+                }
+                else if (user.FacultyId != null) {
+                    <div>@user.LastName @user.FirstName <div>Роль: Працівник деканату</div></div>
+                }
+                else {
+                    <div>@user.LastName @user.FirstName <div>Роль: Адміністратор</div></div>
+                }
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -70,7 +80,10 @@
                             <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Dormitories") ? "active" : "")"
                                asp-action="Dormitories">Гуртожитки</a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Reports") ? "active" : "")"
+                               asp-action="Reports">Звітність</a>
+                        </li>
 
                     </ul>
                 </div>
