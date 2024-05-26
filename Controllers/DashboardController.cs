@@ -506,7 +506,7 @@ namespace DormitoryManager.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateRoom(RoomsViewModel model) {
             var room = model.Room;
-            var existingRoom = await _roomService.GetByNumberOfRoom(room.NumberOfRoom);
+            var existingRoom = await _roomService.GetByNumberOfRoom(room.NumberOfRoom, room.Id);
             var validator = new CreateRoomValidation();
             var res = await validator.ValidateAsync(model.Room);
             if (res.IsValid) {
@@ -515,9 +515,11 @@ namespace DormitoryManager.Controllers
                     existingRoom.NumberOfBeds = room.NumberOfBeds;
                     existingRoom.NumberOfRoom = room.NumberOfRoom;
                     existingRoom.Floor = room.Floor;
+                    existingRoom.FreeBeds = Int32.Parse(room.NumberOfBeds);
                     await _roomService.Update(existingRoom);
                     return RedirectToAction(nameof(Rooms), new { dormId = room.DormId });
                 }
+                room.FreeBeds = Int32.Parse(room.NumberOfBeds);
                 await _roomService.Create(room);
             }
             
@@ -530,5 +532,62 @@ namespace DormitoryManager.Controllers
             return RedirectToAction(nameof(Rooms), new {dormId = room.DormId});
         }
         #endregion
+        #region REPORTS
+        public async Task<IActionResult> reports() {
+           
+            return View();
+        }
+
+        public async Task<IActionResult> FreeRoomReports() {
+            var rooms = await _roomService.GettAll();
+            rooms = rooms.OrderBy(r => r.Floor).ThenBy(r => r.NumberOfRoom).ToList();
+            var dorms = await _dormService.GettAll();
+            var floors = rooms.Select(r => r.Floor).Distinct().OrderBy(f => f).ToList();
+            var freeBedsPerFloor = rooms.GroupBy(r => r.Floor)
+                             .Select(g => new { Floor = g.Key, FreeBeds = g.Sum(r => r.FreeBeds) })
+                             .ToDictionary(x => x.Floor, x => (int?)x.FreeBeds);
+
+            var roomViewModel = new RoomsViewModel {
+                Rooms = rooms,
+                Room = new RoomDto(),
+                Dormitories = dorms,
+                Floors = floors,
+                FreeBedsPerFloor = freeBedsPerFloor
+            };
+            return View(roomViewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> FreeRoomReports(int dormId, int floor) {
+            var roomsOnFloor = await _roomService.GettAllInDormAndFloor(dormId, floor);
+            var rooms = await _roomService.GetAllByDormId(dormId);
+
+            roomsOnFloor = roomsOnFloor.OrderBy(r => r.Floor).ThenBy(r => r.NumberOfRoom).ToList();
+
+            var dorms = await _dormService.GettAll();
+
+            // Отримання унікальних значень поверхів для всіх кімнат гуртожитка
+            var allFloors = rooms.Select(r => r.Floor).Distinct().OrderBy(f => f).ToList();
+
+            var freeBedsPerFloor = roomsOnFloor.GroupBy(r => r.Floor)
+                .Select(g => new { Floor = g.Key, FreeBeds = g.Sum(r => r.FreeBeds) })
+                .ToDictionary(x => x.Floor, x => x.FreeBeds);
+
+            var roomViewModel = new RoomsViewModel {
+                Rooms = roomsOnFloor,
+                Room = new RoomDto(),
+                Dormitories = dorms,
+                Floors = allFloors,
+                dormitoryId = dormId,
+                SelectedFloor = floor,
+                FreeBedsPerFloor = freeBedsPerFloor
+            };
+
+            return View(roomViewModel);
+        }
+
     }
+    #endregion
 }
+

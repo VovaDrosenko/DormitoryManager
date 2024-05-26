@@ -1,6 +1,7 @@
 ﻿using DormitoryManager.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using DormitoryManager.Models.DTO_s.Room;
 
 namespace DormitoryManager.Models.Context
 {
@@ -16,7 +17,6 @@ namespace DormitoryManager.Models.Context
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Student> Students { get; set; }
-        //public DbSet<StudentRoom> StudentRooms { get; set; }
         public DbSet<Worker> Workers { get; set; }
         
 
@@ -36,5 +36,6 @@ namespace DormitoryManager.Models.Context
                 .WithOne(w => w.FacultyWorker)
                 .HasForeignKey<FacultyWorker>(fw => fw.WorkerId);
         }
+        public DbSet<DormitoryManager.Models.DTO_s.Room.RoomDto> RoomDto { get; set; } = default!;
     }
 }

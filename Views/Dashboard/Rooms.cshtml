@@ -37,7 +37,8 @@
                                 </div>
                                      <div class="form-group" style="margin: 10px;">
                                         
-                                        <input hidden="true" asp-for="Room.DormId" value ="@Model.dormitoryId" min="2" class="form-control" />
+                                        <input hidden="True" asp-for="Room.DormId" value ="@Model.dormitoryId" class="form-control" />
+                                        <input hidden="True" asp-for="Room.FreeBeds" value="Room.NumberOfBeds" class="form-control" />
                                     </div> 
                                 </div>
                                 <div>
