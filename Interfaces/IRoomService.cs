@@ -15,7 +15,7 @@ namespace DormitoryManager.Interfaces
         Task Delete(int id);
         Task<RoomDto> GetByNumberOfRoom(int numberOfRoom, int dormId);
         Task<IEnumerable<RoomDto>> GetByDormitoryIdAndGender(int dormitoryId, string gender);
-        Task<List<RoomDto>> GettAllInDormAndFloor(int dormId, int floor);
+        Task<List<RoomDto>> GettAllInDormAndFloor(int dormId, int? floor);
         Task<IEnumerable<RoomDto>> GetAllByDormId(int dormId);
     }
 }

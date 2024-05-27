@@ -79,3 +79,7 @@ a {
     a:hover {
         text-decoration: underline;
     }
+.logo {
+    max-width: 200px;
+    margin-bottom: 40px;
+}

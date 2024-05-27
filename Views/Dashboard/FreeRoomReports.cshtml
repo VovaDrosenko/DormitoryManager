@@ -1,5 +1,6 @@
 ﻿@model DormitoryManager.ViewModel.RoomsViewModel
 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
 <div class="content-wrapper">
     <section class="content">
         <div class="container-fluid">
@@ -34,12 +35,19 @@
                                 <button type="submit" class="btn btn-primary mt-2">Застосувати фільтр</button>
                             </form>
                             <a class="btn btn-primary mt-2" asp-action="FreeRoomReports">Скинути</a>
+                            <form style="margin-top:10px;" asp-action="ExportToExcell" method="post">
+                                <input type="hidden" name="htmlTable"/>
+                                <input type="submit" id="btnSumbit" value="Export to Excel" class="btn btn-success" />
+                            </form>
+                            <div id="tableToExport">
                             <table id="example2" class="table table-bordered table-hover mt-4">      
                                 <thead>
                                     <tr>
                                         <th>Номер Кімнати</th>
                                         <th>Кількість ліжкомісць</th>
                                         <th>Поверх</th>
+                                            <th>Кількість вільних місць</th>
+                                        
                                         <th>Стать проживаючих</th>
                                     </tr>
                                 </thead>
@@ -60,14 +68,24 @@
                                             <td>@item.NumberOfRoom</td>
                                             <td>@item.NumberOfBeds</td>
                                             <td>@item.Floor</td>
+                                            <td>@item.FreeBeds</td>
                                             <td>@item.ResidentsGender</td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
 </div>
+
+<script>
+    $(function(){
+        $("#btnSumbit").click(function(){
+            $("input[name='htmlTable']").val($("#tableToExport").html())
+        })
+    })
+</script>

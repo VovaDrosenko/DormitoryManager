@@ -86,7 +86,7 @@ namespace DormitoryManager.Services
             RoomDto room = new RoomDto();
             var rooms = await _repository.GetAll();
             foreach (var r in rooms) {
-                if (r.NumberOfRoom == numberOfRoom && dormId == r.DormId)
+                if (r.NumberOfRoom == numberOfRoom  && r.DormId == dormId)
                     room = _mapper.Map<RoomDto>(r);
             }
             return room;
@@ -117,7 +117,7 @@ namespace DormitoryManager.Services
                 }).ToList();
         }
 
-        public async Task<List<RoomDto>> GettAllInDormAndFloor(int dormId, int floor) {
+        public async Task<List<RoomDto>> GettAllInDormAndFloor(int dormId, int? floor) {
             var rooms = await _repository.GetAll();
 
             var filteredRooms = rooms.Where(r => r.DormId == dormId && r.Floor == floor)

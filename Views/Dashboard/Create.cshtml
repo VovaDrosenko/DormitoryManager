@@ -50,7 +50,7 @@
                         <div class="col-md-5 offset-3">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">New user</h3>
+                                    <h3 class="card-title">Внесення даних</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
@@ -60,56 +60,50 @@
                                 <form method="post" asp-action="Create">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Ім'я'</label>
-                                            <input asp-for=@Model.user.FirstName type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
+                                            <label for="exampleInputEmail1">Ім'я</label>
+                                            <input asp-for=@Model.user.FirstName type="text" class="form-control" id="exampleInputEmail1" placeholder="Ім'я'">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Last name</label>
-                                            <input asp-for=@Model.user.LastName type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Last Name">
+                                            <label for="exampleInputEmail1">Прізвище</label>
+                                            <input asp-for=@Model.user.LastName type="text" class="form-control" id="exampleInputEmail1" placeholder="Прізвище">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input asp-for=@Model.user.Email type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                            <label for="exampleInputEmail1">Електронна пошта</label>
+                                            <input asp-for=@Model.user.Email type="email" class="form-control" id="exampleInputEmail1" placeholder="Електронна пошта">
                                         </div>
                                         <div class="form-group">
-                                            <label>Role</label>
+                                            <label>Роль</label>
                                             <select asp-for=@Model.user.Role id="roleSelect" class="form-control select2" style="width: 100%;">
-                                                <option value="Komendant">Komendant</option>
-                                                <option value="Dekanat">Dekanat</option>
-                                                <option value="Administrator">Administrator</option>
+                                                <option value="Komendant">Комендант</option>
+                                                <option value="Dekanat">Працівник деканату</option>
+                                                <option value="Administrator">Адміністратор</option>
                                             </select>
                                         </div>
                                         <div class="form-group" id="dormitorySelect" hidden="true">
-                                            <label>Dormitory</label>
+                                            <label>Гуртожиток</label>
                                             <select asp-for="@Model.user.DormId" class="form-control select2" style="width: 100%;">
                                                 @foreach (var dorm in @Model.dormitory) {
                                                     <option value="@dorm.Id">@dorm.DormNumber</option>
                                                 }
-                                                @* <!-- Options for dormitories -->
-                                                <option value="1">Dormitory 1</option>
-                                                <option value="2">Dormitory 2</option>
-                                                <option value="3">Dormitory 3</option> *@
+                                               
                                             </select>
                                         </div>
                                         <div class="form-group" id="facultySelect" hidden="true">
-                                            <label>Faculty</label>
+                                            <label>Факультет</label>
                                             <select asp-for=@Model.user.FacultyId class="form-control select2" style="width: 100%;">
                                                 @foreach (var faculty in @Model.faculties) {
                                                     <option value="@faculty.Id">@faculty.FacultyName</option>
                                                 }
-                                                @* <!-- Options for faculties -->
-                                                <option value="1">Faculty 1</option>
-                                                <option value="2">Faculty 2</option>
-                                                <option value="3">Faculty 3</option> *@
+                                               
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input asp-for=@Model.user.Password type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            <label for="exampleInputPassword1">Пароль</label>
+                                            <input asp-for=@Model.user.Password type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Confirm Password</label>
-                                            <input asp-for=@Model.user.ConfirmPassword type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                                            <label for="exampleInputPassword1">Підтвердіть пароль</label>
+                                            <input asp-for=@Model.user.ConfirmPassword type="password" class="form-control" id="exampleInputPassword1" placeholder="Підтвердіть пароль">
                                         </div>
                                     </div>
                                     <!-- /.card-body -->

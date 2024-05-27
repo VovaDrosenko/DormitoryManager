@@ -18,7 +18,6 @@ namespace DormitoryManager.Models.DTO_s.Student
         public DateTime? DateBegin { get; set; }
         public DateTime? DateEnd { get; set; }
         public string Gender { get; set; } = string.Empty;
-        public bool Settlement { get; set; } = false;
         public string StudentEmail { get; set; } = string.Empty;
         public int FacultyId { get; set; }
         public string FacultyName {  get; set; } = string.Empty;
