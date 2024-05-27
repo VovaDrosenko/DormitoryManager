@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\shared\\dashboard\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\shared\\dashboard\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\views\\dashboard\\editstudentcomendant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\editstudentcomendant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\volodymyr\\source\\repos\\dormitorymanager\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,32 +27,6 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-27T07:52:40.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditStudentComendant.cshtml",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\EditStudentComendant.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\EditStudentComendant.cshtml",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Views\\Dashboard\\EditStudentComendant.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\EditStudentComendant.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-27T07:28:29.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Volodymyr\\source\\repos\\DormitoryManager\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAEkBAAAAAAAAAAASwFwBAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T07:08:57.871Z",
               "EditorCaption": ""
             }
           ]
