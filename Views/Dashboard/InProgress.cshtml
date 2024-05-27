@@ -8,7 +8,7 @@
     var user = await UserManager.GetUserAsync(User);
     var email = await UserManager.GetEmailAsync(user);
     var roles = await UserManager.GetRolesAsync(user);
-    var userdorm = user.DormId;
+    int userdorm = Convert.ToInt32(user.DormId);
 }
 @{
     <!-- DataTables -->
@@ -19,15 +19,6 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
-
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
@@ -35,7 +26,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Список поселених студентів</h3>
+                            <h3 class="card-title">Заявки на поселення</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -48,7 +39,7 @@
                                         {
                                             <th>Дія</th>
                                         }
-                                        @if (@User.IsInRole("Dekanat"))
+                                        @if (@User.IsInRole("Komendant"))
                                         {
                                             <th>Дія</th>
                                         }
@@ -64,13 +55,12 @@
                                             @if (@User.IsInRole("Administrator") && item.StudentEmail != email)
                                             {
                                                 <td>
-                                                    <a asp-controller="Dashboard" asp-action="GetSettlStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a>
-                                                    <a asp-controller="Dashboard" asp-action="DeleteFromSettl" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a>
-                                                </td>
+                                                    <a asp-controller="Dashboard" asp-action="EditStudentComendant" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a>
+                                                    <a asp-controller="Dashboard" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a></td>
                                             }
-                                            @if (@User.IsInRole("Dekanat") && item.StudentEmail != email)
+                                            @if (@User.IsInRole("Komendant") && item.StudentEmail != email)
                                             {
-                                                <td><a asp-controller="Dashboard" asp-action="GetSettlStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a></td>
+                                                <td><a asp-controller="Dashboard" asp-action="EditStudentComendant" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a></td>
                                             }
                                         </tr>
                                         <tr>

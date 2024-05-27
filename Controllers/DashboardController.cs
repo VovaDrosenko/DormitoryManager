@@ -21,7 +21,6 @@ using DormitoryManager.ViewModel;
 using DormitoryManager.Models.DTO_s.Room;
 using DormitoryManager.Validation.Room;
 using DormitoryManager.Validation.Student;
-using DormitoryManager.Models.DTO_s.StudentRoom;
 using Microsoft.EntityFrameworkCore;
 
 namespace DormitoryManager.Controllers
@@ -33,21 +32,19 @@ namespace DormitoryManager.Controllers
         private readonly IStudentService _studentService;
         private readonly IFacultyService _facultyService;
         private readonly IDormitoryService _dormService;
-        private readonly IStudentRoomService _studentRoomService;
         private readonly IMapper _mapper;
         private readonly IRoomService _roomService;
         private readonly UserManager<AppUser> _userManager;
 
 
 
-        public DashboardController(UserManager<AppUser> userManager, UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService, IStudentRoomService studentRoomService = null)
+        public DashboardController(UserManager<AppUser> userManager, UserService userService, IStudentService studentService, IFacultyService facultyService, IDormitoryService dormitoryService, IRoomService roomService)
         {
             _userService = userService;
             _studentService = studentService;
             _facultyService = facultyService;
             _dormService = dormitoryService;
             _roomService = roomService;
-            _studentRoomService = studentRoomService;
             _userManager = userManager;
         }
 
@@ -119,6 +116,59 @@ namespace DormitoryManager.Controllers
 
             return View(result.ToList());
         }
+
+        [HttpGet]
+        public async Task<IActionResult> InProgress()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            // Retrieve data from services
+            var students = await _studentService.GetAllInProgress();
+            var faculties = await _facultyService.GettAll();
+
+            // Create a dictionary for faculties to optimize lookups
+            var facultyDict = faculties.ToDictionary(f => f.Id);
+
+            // Prepare the result list
+            var result = new List<StudentsDto>();
+
+            foreach (var student in students)
+            {
+                var faculty = facultyDict[student.FacultyId];
+                var room = await _roomService.Get(student.RoomId);
+                var dorm = await _dormService.Get(room.DormId);
+
+                result.Add(new StudentsDto
+                {
+                    Id = student.Id,
+                    StudentLastname = student.StudentLastname,
+                    StudentMiddlename = student.StudentMiddlename,
+                    StudentName = student.StudentName,
+                    StudentPhone = student.StudentPhone,
+                    FacultyId = student.FacultyId,
+                    Gender = student.Gender,
+                    FacultyName = faculty.FacultyName,
+                    RoomId = student.RoomId,
+                    RoomNum = room.NumberOfRoom,
+                    Room = room,
+                    DormitoryId = dorm.Id,
+                    DormNum = dorm.DormNumber
+
+                });
+            }
+
+            // Filter results by DormId
+            var filteredResult = result.Where(s => s.DormitoryId == Convert.ToInt32(user.DormId)).ToList();
+
+            return View(filteredResult);
+        }
+
+
+
         [HttpPost]
         public async Task<IActionResult> Logout() {
             await _userService.LogoutUserAsync();
@@ -217,16 +267,13 @@ namespace DormitoryManager.Controllers
         {
             var student = await _studentService.Get(id);
             var faculty = await _facultyService.Get(student.FacultyId);
-            var stdRoom = await _studentRoomService.Get(id);
-            var dorm = await _dormService.Get(stdRoom.DormId);
-            var room = await _roomService.Get(stdRoom.RoomId);
+            var room = await _roomService.Get(student.RoomId);
+            var dorm = await _dormService.Get(room.DormId);
             student.FacultyName = faculty.FacultyName;
             student.DormNum = dorm.DormNumber;
             student.RoomNum = room.NumberOfRoom;
-            student.DateBegin = stdRoom.DateBegin;
-            student.DateEnd = stdRoom.DateEnd;
-
-            
+            student.DateBegin = student.DateBegin;
+            student.DateEnd = student.DateEnd;
 
             await GetRoles();
             if (student != null)
@@ -278,15 +325,60 @@ namespace DormitoryManager.Controllers
             {
 
                 await _studentService.Update(studentsDto);
-                await _studentRoomService.Create(new StudentRoomDto()
-                {
-                    DormId = studentsDto.DormitoryId,
-                    RoomId = studentsDto.RoomId,
-                    StudentId = studentsDto.Id,
-                    DateBegin = studentsDto.DateBegin,
-                    DateEnd = studentsDto.DateEnd
-                });
+                
                 return RedirectToAction(nameof(Requests));
+            }
+
+            ViewBag.AuthError = validationResult.Errors[0];
+            return View(studentsDto);
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditStudentComendant(int id)
+        {
+            var student = await _studentService.Get(id);
+            var faculties = await _facultyService.GettAll();
+            var studentFaculty = faculties.FirstOrDefault(f => f.Id == student.FacultyId);
+            var room = await _roomService.Get(student.RoomId);
+            var dorm = await _dormService.Get(room.DormId);
+
+            student.DormNum = dorm.DormNumber;
+            student.DormitoryId = dorm.Id;
+            student.RoomId = room.Id;
+            student.RoomNum = room.NumberOfRoom;
+            ViewBag.StudentGender = student.Gender;
+
+            if (studentFaculty != null)
+            {
+                student.FacultyName = studentFaculty.FacultyName;
+            }
+
+            await GetRoles();
+            if (student != null)
+            {
+                var base64Photo = ConvertToBase64(student.Photo);
+                var base64Doc = ConvertToBase64(student.ApplicationScan);
+                student.PhotoString = base64Photo;
+                student.ApplicationScanString = base64Doc;
+                return View(student);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditStudentComendant(StudentsDto studentsDto)
+        {
+            studentsDto.ApplicationScan = ConvertFromBase64String(studentsDto.ApplicationScanString);
+            studentsDto.Photo = ConvertFromBase64String(studentsDto.PhotoString);
+            var validator = new UpdateStudentsValidation();
+            var validationResult = await validator.ValidateAsync(studentsDto);
+            if (validationResult.IsValid)
+            {
+
+                await _studentService.Update(studentsDto);
+
+                return RedirectToAction(nameof(InProgress));
             }
 
             ViewBag.AuthError = validationResult.Errors[0];

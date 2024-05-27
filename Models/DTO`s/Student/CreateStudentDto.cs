@@ -17,11 +17,11 @@ namespace DormitoryManager.Models.DTO_s.Student;
 
     public string? StudentEmail { get; set; }
 
+    public int? StatusId { get; set; }
     public string? Gender { get; set; }
 
     public int FacultyId { get; set; }
 
-    //public string Wishes { get; set; } = string.Empty;
     public IFormFile Photo { get; set; }
     public IFormFile ApplicationScan { get; set; }
 

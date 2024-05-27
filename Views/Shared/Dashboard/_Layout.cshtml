@@ -4,6 +4,8 @@
 
 @{
     var user = await UserManager.GetUserAsync(User);
+    var roles = await UserManager.GetRolesAsync(user);
+    var role = roles.First();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +22,9 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                     <a class="navbar-brand" asp-controller="Dashboard" asp-action="Index">DormitoryManager</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                
+                    <span >@user.LastName @user.FirstName - @role</span>
+                
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -70,8 +71,10 @@
                             <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Dormitories") ? "active" : "")"
                                asp-action="Dormitories">Гуртожитки</a>
                         </li>
-                        
-
+                        <li class="nav-item">
+                            <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "InProgress") ? "active" : "")"
+                               asp-action="InProgress">Заявки на поселення</a>
+                        </li>
                     </ul>
                 </div>
 

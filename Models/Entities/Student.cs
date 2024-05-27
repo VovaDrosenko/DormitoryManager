@@ -20,9 +20,7 @@ public partial class Student : IEntity
     public string? StudentEmail { get; set; } = null!;
     public byte[] Photo { get;set; } = null!;
     public byte[] ApplicationScan { get; set; } = null!;
-    public int RoomId { get; set; }
-
-    public bool Settlement { get; set; }
+    public int? RoomId { get; set; }
 
     public int? Course { get; set; }
     public DateTime? DateBegin { get; set; }
