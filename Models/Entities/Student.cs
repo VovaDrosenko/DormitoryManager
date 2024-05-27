@@ -22,7 +22,6 @@ public partial class Student : IEntity
     public byte[] ApplicationScan { get; set; } = null!;
     public int RoomId { get; set; }
 
-    public bool Settlement { get; set; }
 
     public int? Course { get; set; }
     public DateTime? DateBegin { get; set; }

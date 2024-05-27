@@ -3,84 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\shared\\dashboard\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\shared\\dashboard\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\dormitories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\dormitories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\models\\dto\u0060s\\student\\studentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\student\\studentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\models\\dto\u0060s\\student\\updatestudentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\student\\updatestudentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\models\\dto\u0060s\\student\\createstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\dto\u0060s\\student\\createstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\wwwroot\\css\\style.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:wwwroot\\css\\style.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\home\\documents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\home\\documents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\requests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\requests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\home\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\home\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\shared\\dashboard\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\shared\\dashboard\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\freeroomreports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\freeroomreports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\viewmodel\\roomsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:viewmodel\\roomsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\rooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\rooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\dormitorydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\dormitorydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\createdormitory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\createdormitory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\models\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:models\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\rooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\rooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\shared\\dashboard\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\shared\\dashboard\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|c:\\users\\sasha\\desktop\\dormitorymanager\\views\\dashboard\\createfaculty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3633E745-71C7-48B0-98D6-4718432D4156}|DormitoryManager.csproj|solutionrelative:views\\dashboard\\createfaculty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,262 +102,210 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Style.css",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\wwwroot\\css\\Style.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\Style.css",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\wwwroot\\css\\Style.css",
-              "RelativeToolTip": "wwwroot\\css\\Style.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-26T07:42:29.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-26T07:42:22.567Z",
+              "DocumentIndex": 0,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "Services\\StudentService.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Services\\StudentService.cs",
+              "RelativeToolTip": "Services\\StudentService.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwFYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:29:52.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Dormitories.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Dormitories.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\Dormitories.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Dormitories.cshtml*",
-              "RelativeToolTip": "Views\\Dashboard\\Dormitories.cshtml*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T07:40:09.931Z",
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Interfaces\\IStudentService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IStudentService.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Interfaces\\IStudentService.cs",
+              "RelativeToolTip": "Interfaces\\IStudentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:29:41.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateStudentsDto.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\DTO\u0060s\\Student\\UpdateStudentsDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\Student\\UpdateStudentsDto.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\DTO\u0060s\\Student\\UpdateStudentsDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\Student\\UpdateStudentsDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:29:23.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\_ViewStart.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\_ViewStart.cshtml",
+              "Title": "CreateStudentDto.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\DTO\u0060s\\Student\\CreateStudentDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\Student\\CreateStudentDto.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\DTO\u0060s\\Student\\CreateStudentDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\Student\\CreateStudentDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T07:40:02.732Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:29:16.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SignIn.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\SignIn.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\SignIn.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\SignIn.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\SignIn.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T07:39:38.929Z",
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\Entities\\Student.cs",
+              "RelativeToolTip": "Models\\Entities\\Student.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowBUAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:28:46.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentsDto.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\DTO\u0060s\\Student\\StudentsDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\u0060s\\Student\\StudentsDto.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\DTO\u0060s\\Student\\StudentsDto.cs",
+              "RelativeToolTip": "Models\\DTO\u0060s\\Student\\StudentsDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:26:53.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Style.css",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\wwwroot\\css\\Style.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\Style.css",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\wwwroot\\css\\Style.css",
-              "RelativeToolTip": "wwwroot\\css\\Style.css",
-              "ViewState": "AQIAACEAAAAAAAAAAAAwwFEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-26T07:39:17.031Z",
+              "Title": "EditStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\EditStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\EditStudent.cshtml",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\EditStudent.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\EditStudent.cshtml",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAIEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T18:23:22.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Documents.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Home\\Documents.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Documents.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Home\\Documents.cshtml",
-              "RelativeToolTip": "Views\\Home\\Documents.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Title": "Requests.cshtml",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Requests.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Requests.cshtml",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Requests.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Requests.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T07:34:42.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Map.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Home\\Map.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Map.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Home\\Map.cshtml",
-              "RelativeToolTip": "Views\\Home\\Map.cshtml",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAA8AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T05:58:54.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T05:58:05.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Sidebar.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Shared\\Dashboard\\Sidebar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Dashboard\\Sidebar.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Shared\\Dashboard\\Sidebar.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Dashboard\\Sidebar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T05:57:47.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DormitoryDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\DormitoryDetails.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\DormitoryDetails.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\DormitoryDetails.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\DormitoryDetails.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T04:44:48.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Rooms.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Rooms.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\Rooms.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Rooms.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\Rooms.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T03:56:13.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IRoomService.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Interfaces\\IRoomService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IRoomService.cs",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Interfaces\\IRoomService.cs",
-              "RelativeToolTip": "Interfaces\\IRoomService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:47:18.165Z",
+              "WhenOpened": "2024-05-26T18:22:55.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "RoomService.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Services\\RoomService.cs",
-              "RelativeDocumentMoniker": "Services\\RoomService.cs",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Services\\RoomService.cs",
-              "RelativeToolTip": "Services\\RoomService.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAAwGcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:45:21.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\Entities\\Room.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\Room.cs",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Models\\Entities\\Room.cs",
-              "RelativeToolTip": "Models\\Entities\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:41:57.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RoomsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\ViewModel\\RoomsViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\RoomsViewModel.cs",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\ViewModel\\RoomsViewModel.cs",
-              "RelativeToolTip": "ViewModel\\RoomsViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:23:08.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\Create.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Create.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\Create.cshtml",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAHQAAABlAAAA",
+              "Title": "CreateFaculty.cshtml",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\CreateFaculty.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\CreateFaculty.cshtml",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\CreateFaculty.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\CreateFaculty.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T02:22:53.975Z",
+              "WhenOpened": "2024-05-26T12:36:40.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Rooms.cshtml",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Rooms.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Rooms.cshtml",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Rooms.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Rooms.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T12:03:20.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "FreeRoomReports.cshtml",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\FreeRoomReports.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\FreeRoomReports.cshtml",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\FreeRoomReports.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\FreeRoomReports.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAABlAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Create.cshtml",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\Create.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Create.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAABoAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T02:04:39.279Z",
+              "WhenOpened": "2024-05-26T10:13:10.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AQIAACcCAAAAAAAAAAAIwEwCAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T19:40:22.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Shared\\Dashboard\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Dashboard\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Shared\\Dashboard\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\Dashboard\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAtAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEUAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T01:03:46.821Z",
+              "WhenOpened": "2024-05-26T10:08:23.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Services\\RoomService.cs",
+              "RelativeToolTip": "Services\\RoomService.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAmwFgAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T08:57:23.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAOsBAAAAAAAAAAAYwOUBAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T08:38:12.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateDormitory.cshtml",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\CreateDormitory.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\CreateDormitory.cshtml",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Views\\Dashboard\\CreateDormitory.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\CreateDormitory.cshtml",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAmwCkAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T12:45:00.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Interfaces\\IRoomService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IRoomService.cs",
+              "ToolTip": "C:\\Users\\sasha\\Desktop\\DormitoryManager\\Interfaces\\IRoomService.cs",
+              "RelativeToolTip": "Interfaces\\IRoomService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T08:56:47.069Z",
               "EditorCaption": ""
             }
           ]

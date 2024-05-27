@@ -1,6 +1,6 @@
 ﻿@model DormitoryManager.Models.DTO_s.Dormitory.DormitoryDto
 
-<h4>Dormitory</h4>
+<h4>Створення гуртожитку</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -8,7 +8,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
 
-                <label asp-for="DormNumber" class="control-label"></label>
+                <label asp-for="DormNumber" class="control-label">Номер гуртожитку</label>
                 <div>
                     @if (@ViewBag.NumberError != null) {
                         <span class="text-danger mt-3">@ViewBag.NumberError</span>
@@ -19,7 +19,7 @@
                 
             </div>
             <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
+                <label asp-for="Address" class="control-label">Адреса гуртожитку</label>
                 <div>
                     @if (@ViewBag.AddressError != null) {
                         <span class="text-danger mt-3">@ViewBag.AddressError</span>
@@ -29,7 +29,7 @@
                 
             </div>
             <div class="form-group">
-                <label asp-for="Floors" class="control-label"></label>
+                <label asp-for="Floors" class="control-label">Кількість поверхів</label>
                 <div>
                     @if (@ViewBag.FloorsError != null) {
                         <span class="text-danger mt-3">@ViewBag.FloorsError</span>
@@ -39,7 +39,7 @@
                 <span asp-validation-for="Floors" class="text-danger"></span>
             </div>
             <div class="form-group" >
-                <input style="margin-top: 10px;" type="submit" value="Create" class="btn btn-primary" />
+                <input style="margin-top: 10px;" type="submit" value="Створити" class="btn btn-primary" />
             </div>
         </form>
     </div>

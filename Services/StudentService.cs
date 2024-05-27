@@ -74,7 +74,7 @@ namespace DormitoryManager.Services
         {
             var result = await _repository.GetAll();
             IEnumerable<StudentsDto> query = from student in result
-                                             where student.Settlement == true
+                                             
                                              select _mapper.Map<StudentsDto>(student);
             return _mapper.Map<List<StudentsDto>>(query);
         }
@@ -84,7 +84,7 @@ namespace DormitoryManager.Services
 
             var result = await _repository.GetAll();
             IEnumerable<StudentsDto> query = from student in result
-                                             where student.Settlement == false
+                                             
                                              select _mapper.Map<StudentsDto>(student);
             return _mapper.Map<List<StudentsDto>>(query);
         }
