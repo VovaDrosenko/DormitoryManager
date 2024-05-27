@@ -42,15 +42,7 @@
                                     <tr>
                                         <th>ПІБ</th>
                                         <th>Спеціальність</th>
-                                        @if (@User.IsInRole("Administrator"))
-                                        {
-                                            <th>Дія</th>
-                                        }
-                                        @if (@User.IsInRole("Dekanat"))
-                                        {
-                                            <th>Дія</th>
-                                        }
-
+                                        <th>Дія</th
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -66,7 +58,7 @@
                                                     <a asp-controller="Dashboard" asp-action="DeleteFromSettl" asp-route-id="@item.Id" class="btn btn-block btn-danger btn-sm">Видалити</a>
                                                 </td>
                                             }
-                                            @if (@User.IsInRole("Dekanat") && item.StudentEmail != email)
+                                            @if (@User.IsInRole("Dekanat") || @User.IsInRole("Komendant") && item.StudentEmail != email)
                                             {
                                                 <td><a asp-controller="Dashboard" asp-action="GetSettlStudent" asp-route-id="@item.Id" class="btn btn-block btn-warning btn-sm">Переглянути</a></td>
                                             }
