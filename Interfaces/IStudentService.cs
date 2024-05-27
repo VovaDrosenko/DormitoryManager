@@ -7,6 +7,7 @@ namespace DormitoryManager.Interfaces
     {
         Task<List<StudentsDto>> GettAllSettStud();
         Task<List<StudentsDto>> GetAllRequest();
+        Task<List<StudentsDto>> GetAllInProgress();
         Task<StudentsDto> Get(int id);
         Task<ServiceResponse> GetByName(StudentsDto model);
         Task Create(CreateStudentDto model);

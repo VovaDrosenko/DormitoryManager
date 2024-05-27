@@ -11,23 +11,22 @@ public partial class Student : IEntity
 
     public string? StudentName { get; set; } = null!;
 
-    public string? StudentMiddlename { get; set; }=null!;
+    public string? StudentMiddlename { get; set; } = null!;
 
-    public string? StudentLastname { get; set; }= null!;
+    public string? StudentLastname { get; set; } = null!;
 
     public string? StudentPhone { get; set; } = null!;
 
     public string? StudentEmail { get; set; } = null!;
-    public byte[] Photo { get;set; } = null!;
+    public byte[] Photo { get; set; } = null!;
     public byte[] ApplicationScan { get; set; } = null!;
-    public int RoomId { get; set; }
-
+    public int? RoomId { get; set; }
 
     public int? Course { get; set; }
     public DateTime? DateBegin { get; set; }
 
     public DateTime? DateEnd { get; set; }
-    
+
     public int StatusId { get; set; }
     public DateTime? DateOfBirth { get; set; }
 

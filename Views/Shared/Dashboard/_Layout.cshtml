@@ -84,6 +84,10 @@
                                 <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Requests") ? "active" : "")"
                                    asp-action="Requests">Заявки на поселення</a>
                             </li>
+                            <li class="nav-item">
+                                <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "InProgress") ? "active" : "")"
+                                   asp-action="InProgress">Заявки на поселення Коменда</a>
+                            </li>
                         }
                         
 

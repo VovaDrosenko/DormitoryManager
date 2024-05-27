@@ -3,16 +3,6 @@
 @{
     ViewData["Title"] = "Форма поселення";
 }
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Інформація для студентів НУБІП</title>
-    <!-- Підключення стилів з CSS файлу -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
 
 <div class="container">
     <form method="post" enctype="multipart/form-data">
@@ -76,6 +66,8 @@
                     <input asp-for="ApplicationScan" class="form-control" type="file" accept="image/*" required>
                 </div>
 
+                <input asp-for="StatusId" class="form-control" type="hidden" value="5">
+
                 <div class="col-12 text-center">
                     <button type="submit" class="btn btn-primary">Відправити</button>
                 </div>
@@ -84,5 +76,3 @@
         </div>
     </form>
 </div>
-</body>
-</html>

@@ -74,17 +74,25 @@ namespace DormitoryManager.Services
         {
             var result = await _repository.GetAll();
             IEnumerable<StudentsDto> query = from student in result
-                                             
+                                             where student.StatusId == 7
                                              select _mapper.Map<StudentsDto>(student);
             return _mapper.Map<List<StudentsDto>>(query);
         }
 
         public async Task<List<StudentsDto>> GetAllRequest()
         {
-
             var result = await _repository.GetAll();
             IEnumerable<StudentsDto> query = from student in result
-                                             
+                                             where student.StatusId == 5
+                                             select _mapper.Map<StudentsDto>(student);
+            return _mapper.Map<List<StudentsDto>>(query);
+        }
+
+        public async Task<List<StudentsDto>> GetAllInProgress()
+        {
+            var result = await _repository.GetAll();
+            IEnumerable<StudentsDto> query = from student in result
+                                             where student.StatusId == 6
                                              select _mapper.Map<StudentsDto>(student);
             return _mapper.Map<List<StudentsDto>>(query);
         }
