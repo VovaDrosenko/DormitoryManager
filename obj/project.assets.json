@@ -9437,11 +9437,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Volodymyr\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
+      "projectUniqueName": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\DormitoryManager.csproj",
       "projectName": "DormitoryManager",
-      "projectPath": "C:\\Users\\Volodymyr\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
+      "projectPath": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\DormitoryManager.csproj",
       "packagesPath": "C:\\Users\\Volodymyr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Volodymyr\\Desktop\\DormitoryManager\\obj\\",
+      "outputPath": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Volodymyr\\AppData\\Roaming\\NuGet\\NuGet.Config",

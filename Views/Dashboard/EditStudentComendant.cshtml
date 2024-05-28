@@ -7,6 +7,7 @@
 @{
     var user = await UserManager.GetUserAsync(User);
     var roles = await UserManager.GetRolesAsync(user);
+    var returnUrl = ViewBag.ReturnUrl as string;
     var userdorm = user.DormId;
 }
 <section class="min-vh-100 mb-8">
@@ -28,9 +29,9 @@
                                 <img src="@Model.ApplicationScanString" alt="Student Document" style="max-width: 200px; max-height: 200px;">
                             }
 
-                            
-                            <form asp-action="EditStudent">
-                                <p ><strong>ПІБ:</strong> @Model.StudentName @Model.StudentMiddlename @Model.StudentLastname</p>
+
+                            <form asp-action="EditStudentComendant">
+                                <p><strong>ПІБ:</strong> @Model.StudentName @Model.StudentMiddlename @Model.StudentLastname</p>
                                 <p><strong>Дата народження:</strong> @Model.DateOfBirth.ToShortDateString()</p>
                                 <p><strong>Стать:</strong> @Model.Gender</p>
                                 <p><strong>Номер телефону:</strong> @Model.StudentPhone</p>
@@ -50,7 +51,7 @@
                                 <input type="hidden" asp-for="PhotoString" value="@Model.PhotoString" />
                                 <input type="hidden" asp-for="ApplicationScanString" value="@Model.ApplicationScanString" />
                                 <input type="hidden" asp-for="DormitoryId" value="@Model.DormitoryId" />
-                                
+
                                 <div class="mb-3">
                                     <label asp-for="RoomId"><strong>Номер кімнати:</strong></label>
                                     <select asp-for="RoomId" id="RoomId" class="form-control">
@@ -84,7 +85,7 @@
                                                                 }
                                                                 roomsDropdown.append(option);
                                                             });
-                                                        } 
+                                                        }
                                                     }
                                                 });
                                             }
@@ -111,9 +112,9 @@
                                         });
                                     </script>
                                 }
-                                
 
-                                
+
+
 
                                 <div class="mb-3">
                                     <label asp-for="DateBegin"><strong>Дата початку:</strong></label>
@@ -125,13 +126,15 @@
                                 </div>
 
                                 <input asp-for="StatusId" class="form-control" type="hidden" value="7">
+                                <input name="returnUrl" type="hidden" value="@returnUrl">
+
                                 <div class="form-group">
                                     <input style="margin: 10px" type="submit" value="Поселити" class="btn btn-primary" />
                                 </div>
                             </form>
 
                             <div>
-                                <a asp-action="Requests">Назад до списку</a>
+                                <a asp-action="ReturnBack" asp-route-returnUrl="@returnUrl">Назад до списку</a>
                             </div>
                         </div>
                     </div>

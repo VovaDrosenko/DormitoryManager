@@ -17,171 +17,179 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DormitoryManager
 build_property.RootNamespace = DormitoryManager
-build_property.ProjectDir = C:\Users\Volodymyr\Desktop\DormitoryManager\
+build_property.ProjectDir = C:\Users\Volodymyr\Desktop\Нова папка\DormitoryManager\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Volodymyr\Desktop\DormitoryManager
+build_property.MSBuildProjectDirectory = C:\Users\Volodymyr\Desktop\Нова папка\DormitoryManager
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Create.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/CreateDormitory.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/CreateDormitory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZURvcm1pdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/CreateFaculty.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/CreateFaculty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZUZhY3VsdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Delete.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Dormitories.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Dormitories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERvcm1pdG9yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/DormitoryDetails.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/DormitoryDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERvcm1pdG9yeURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/EditDormitory.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/EditDormitory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXREb3JtaXRvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/EditFaculty.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/EditFaculty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRGYWN1bHR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/EditStudent.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/EditStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/EditStudentComendant.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/EditStudentComendant.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRTdHVkZW50Q29tZW5kYW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/EditUser.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/EditUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Faculties.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Faculties.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEZhY3VsdGllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/ForgotPassword.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/FreeRoomReports.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/FreeRoomReports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEZyZWVSb29tUmVwb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/GetAll.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdldEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/GetSettlStudent.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/GetAllRooms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdldEFsbFJvb21zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/GetSettlStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdldFNldHRsU3R1ZGVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Index.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/InProgress.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/InProgress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluUHJvZ3Jlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Profile.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Reports.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Reports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFJlcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Requests.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Requests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFJlcXVlc3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/ResetPassword.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFJlc2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Rooms.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Rooms.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFJvb21zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/SignIn.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFNpZ25Jbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/Users.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/StudentsInRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFN0dWRlbnRzSW5Sb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Dashboard/_ViewStart.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Dashboard/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Home/Creators.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Home/Creators.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Home/Documents.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Home/Documents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N1bWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Home/Form.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Home/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Home/Index.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Home/Map.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Home/Map.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Home/Privacy.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Shared/Dashboard/Sidebar.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Shared/Dashboard/Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2hib2FyZFxTaWRlYmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Shared/Error.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Shared/Sidebar.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Shared/Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNpZGViYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/_ViewImports.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/_ViewStart.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Shared/Dashboard/_Layout.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Shared/Dashboard/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2hib2FyZFxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-lhl3jvmz8v
 
-[C:/Users/Volodymyr/Desktop/DormitoryManager/Views/Shared/_Layout.cshtml]
+[C:/Users/Volodymyr/Desktop/Нова папка/DormitoryManager/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-utv9zfzt7i

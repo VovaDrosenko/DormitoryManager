@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oWcX3/B3I1eUsgcwzGkTNV2/32/mK3MuT+MX7pntqaTZl0avigGooy1SLmbSMV+pscRGV5SjjmG9RdW4Qy7/iA==",
+  "dgSpecHash": "M2DKnILhtRIFmq5D9r7apHGBdVCWOFrB0qg+tgwAXAA7PZIr4uMy3C3LpbATQfnLigHpCgHfuRyhbQzbuFxCUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Volodymyr\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
+  "projectFilePath": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\DormitoryManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Volodymyr\\.nuget\\packages\\ardalis.specification\\8.0.0\\ardalis.specification.8.0.0.nupkg.sha512",
     "C:\\Users\\Volodymyr\\.nuget\\packages\\ardalis.specification.entityframeworkcore\\8.0.0\\ardalis.specification.entityframeworkcore.8.0.0.nupkg.sha512",

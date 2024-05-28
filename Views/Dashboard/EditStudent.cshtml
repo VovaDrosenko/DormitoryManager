@@ -39,7 +39,8 @@
                                 <input type="hidden" asp-for="FacultyId" value="@Model.FacultyId" />
                                 <input type="hidden" asp-for="PhotoString" value="@Model.PhotoString" />
                                 <input type="hidden" asp-for="ApplicationScanString" value="@Model.ApplicationScanString" />
-                                <div class="mb-3">
+                                <input type="hidden" asp-for="StatusId" value="6" />
+                               <div class="mb-3">
                                     <label asp-for="DormitoryId"><strong>Номер гуртожитку:</strong></label>
                                     <select asp-for="DormitoryId" id="DormitoryId" class="form-control">
                                         @foreach (var dorm in ViewBag.Dormitories)
@@ -117,9 +118,6 @@
                                         });
                                     </script>
                                 }
-                                
-
-                                
 
                                 <div class="mb-3">
                                     <label asp-for="DateBegin"><strong>Дата початку:</strong></label>
@@ -130,7 +128,7 @@
                                     <input asp-for="DateEnd" id="DateEnd" class="form-control" type="date" />
                                 </div>
 
-                                <input asp-for="StatusId" class="form-control" type="hidden" value="6">
+                                
                                 <div class="form-group">
                                     <input style="margin: 10px" type="submit" value="Поселити" class="btn btn-primary" />
                                 </div>
