@@ -66,7 +66,7 @@ namespace DormitoryManager.Services
 
         public async Task Update(RoomDto model)
         {
-            await _repository.Update(_mapper.Map<Models.Entities.Room>(model));
+            await _repository.Update(_mapper.Map<Room>(model));
             await _repository.Save();
         }
 
@@ -76,9 +76,9 @@ namespace DormitoryManager.Services
             return _mapper.Map<List<RoomDto>>(result);
         }
         async Task<List<RoomDto>> IRoomService.GettAllInDorm(int dormId) {
-            var result = await _repository.GetAll(); // Отримуємо всі кімнати з бази даних
-            var roomsInDorm = result.Where(r => r.DormId == dormId).ToList(); // Відбираємо кімнати, які належать до переданого гуртожитку
-            return _mapper.Map<List<RoomDto>>(roomsInDorm); // Повертаємо список кімнат, змінений на RoomDto
+            var result = await _repository.GetAll();
+            var roomsInDorm = result.Where(r => r.DormId == dormId).ToList();
+            return _mapper.Map<List<RoomDto>>(roomsInDorm); 
         }
 
 

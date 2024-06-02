@@ -9432,19 +9432,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Volodymyr\\.nuget\\packages\\": {}
+    "C:\\Users\\VoVa_PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\DormitoryManager.csproj",
+      "projectUniqueName": "C:\\Users\\VoVa_PC\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
       "projectName": "DormitoryManager",
-      "projectPath": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\DormitoryManager.csproj",
-      "packagesPath": "C:\\Users\\Volodymyr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Volodymyr\\Desktop\\Нова папка\\DormitoryManager\\obj\\",
+      "projectPath": "C:\\Users\\VoVa_PC\\Desktop\\DormitoryManager\\DormitoryManager.csproj",
+      "packagesPath": "C:\\Users\\VoVa_PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VoVa_PC\\Desktop\\DormitoryManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Volodymyr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VoVa_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9464,11 +9464,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9559,7 +9554,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

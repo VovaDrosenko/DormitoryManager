@@ -96,5 +96,14 @@ namespace DormitoryManager.Services
                                              select _mapper.Map<StudentsDto>(student);
             return _mapper.Map<List<StudentsDto>>(query);
         }
+
+        public async Task<int> GetOccupiedBedsCount(int roomId)
+        {
+            var studentsInRoom = await _repository.GetAll();
+
+            var occupiedBedsCount = studentsInRoom.Where(s => s.RoomId == roomId).Count();
+
+            return occupiedBedsCount;
+        }
     }
 }

@@ -293,6 +293,10 @@ namespace DormitoryManager.Controllers
             }
 
             var rooms = await _roomService.GettAllInDorm(Convert.ToInt32(user.DormId));
+            foreach (var room in rooms)
+            {
+                room.FreeBeds = await _studentService.GetOccupiedBedsCount(room.Id);
+            }
             var sortedRooms = rooms.OrderBy(r => r.NumberOfRoom).ToList();
 
             return View(sortedRooms);

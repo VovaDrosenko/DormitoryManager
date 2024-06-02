@@ -5,6 +5,7 @@ namespace DormitoryManager.Interfaces
 {
     public interface IStudentService
     {
+        Task<int> GetOccupiedBedsCount(int roomId);
         Task<List<StudentsDto>> GettAllSettStud();
         Task<List<StudentsDto>> GetAllRequest();
         Task<List<StudentsDto>> GetAllInProgress();
