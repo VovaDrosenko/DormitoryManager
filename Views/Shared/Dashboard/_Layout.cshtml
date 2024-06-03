@@ -88,6 +88,10 @@
                                 <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Requests") ? "active" : "")"
                                    asp-action="Requests">Заявки на поселення</a>
                             </li>
+                            <li class="nav-item">
+                                <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Reports") ? "active" : "")"
+                                   asp-action="Reports">Звітність</a>
+                            </li>
 
                         }
                         else if (User.IsInRole("Komendant"))
@@ -103,6 +107,10 @@
                             <li class="nav-item">
                                 <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "GetAllRooms") ? "active" : "")"
                                    asp-action="GetAllRooms">Кімнати</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="index-link" class="nav-link text-dark @((ViewContext.RouteData.Values["Action"] as string == "Reports") ? "active" : "")"
+                                   asp-action="Reports">Звітність</a>
                             </li>
                         }
 

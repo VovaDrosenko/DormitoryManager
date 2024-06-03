@@ -256,6 +256,14 @@ namespace DormitoryManager.Controllers
         }
         #endregion
 
+
+        public async Task<IActionResult> Map() {
+            
+
+            return View();
+
+        }
+
         public async Task<IActionResult> Delete(int Id)
         {
             await _studentService.Delete(Id);
